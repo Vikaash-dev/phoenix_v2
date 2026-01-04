@@ -5,7 +5,6 @@ Handles loading, preprocessing, and augmenting brain MRI images
 
 import os
 import numpy as np
-import cv2
 from PIL import Image
 import tensorflow as tf
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
