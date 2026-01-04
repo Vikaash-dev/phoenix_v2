@@ -166,12 +166,15 @@ def get_model_summary(model):
     
     # Count parameters
     total_params = model.count_params()
-    trainable_params = sum([tf.size(w).numpy() for w in model.trainable_weights])
-    non_trainable_params = total_params - trainable_params
+    
+    # For more detailed breakdown, we can use trainable_weights
+    # Note: This is kept for completeness but model.count_params() is more efficient
+    trainable_count = sum([tf.size(w).numpy() for w in model.trainable_weights])
+    non_trainable_count = total_params - trainable_count
     
     print(f"\nTotal Parameters: {total_params:,}")
-    print(f"Trainable Parameters: {trainable_params:,}")
-    print(f"Non-trainable Parameters: {non_trainable_params:,}")
+    print(f"Trainable Parameters: {trainable_count:,}")
+    print(f"Non-trainable Parameters: {non_trainable_count:,}")
     print("="*80 + "\n")
 
 

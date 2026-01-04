@@ -254,8 +254,13 @@ def augment_image(image, label):
         
     Returns:
         Augmented image and label
+    
+    Note:
+        Uses 90-degree rotations (k=0,1,2,3) which is appropriate for medical
+        images that can be viewed from different orientations. For more subtle
+        rotations, consider using tf.contrib.image.rotate with smaller angles.
     """
-    # Random rotation
+    # Random 90-degree rotation (appropriate for MRI scans)
     image = tf.image.rot90(image, k=tf.random.uniform(shape=[], minval=0, maxval=4, dtype=tf.int32))
     
     # Random flip

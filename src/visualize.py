@@ -9,6 +9,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.metrics import confusion_matrix
 import cv2
+import tensorflow as tf
 
 
 def plot_sample_images(image_dir, class_name, num_samples=5, save_path=None):
@@ -35,6 +36,8 @@ def plot_sample_images(image_dir, class_name, num_samples=5, save_path=None):
     # Select random samples
     if len(image_files) > num_samples:
         image_files = np.random.choice(image_files, num_samples, replace=False)
+    elif len(image_files) < num_samples:
+        num_samples = len(image_files)  # Adjust to available samples
     
     # Load images
     for img_file in image_files[:num_samples]:

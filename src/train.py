@@ -115,11 +115,13 @@ def train_model_with_arrays():
     
     # Load dataset
     print("Loading dataset from directory...")
-    data_dir = os.path.join(config.DATA_DIR, 'all')  # Assume all data in one directory
+    # Try to load from a unified 'all' directory if it exists (optional structure)
+    data_dir = os.path.join(config.DATA_DIR, 'all')
     
     if not os.path.exists(data_dir):
-        print(f"Data directory {data_dir} not found!")
-        print("Using generator-based training instead...")
+        print(f"Note: Optional unified data directory {data_dir} not found.")
+        print("This is expected if using train/val/test split structure.")
+        print("Switching to generator-based training (recommended)...")
         return train_model_with_generators()
     
     images, labels = load_dataset_from_directory(data_dir)
