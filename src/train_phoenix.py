@@ -12,13 +12,20 @@ import numpy as np
 import tensorflow as tf
 from tensorflow import keras
 
-# Add parent directory to path for imports
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-
-from models.neurosnake_model import create_neurosnake_model, create_baseline_model
-from src.phoenix_optimizer import create_adan_optimizer, create_focal_loss
-from src.physics_informed_augmentation import PhysicsInformedAugmentation
-import config
+# Import from local modules (assumes package is properly installed or run from project root)
+try:
+    from models.neurosnake_model import create_neurosnake_model, create_baseline_model
+    from src.phoenix_optimizer import create_adan_optimizer, create_focal_loss
+    from src.physics_informed_augmentation import PhysicsInformedAugmentation
+    import config
+except ImportError:
+    # Fallback: Add parent directory to path if imports fail
+    # NOTE: This is a temporary workaround. For production, use proper package installation.
+    sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+    from models.neurosnake_model import create_neurosnake_model, create_baseline_model
+    from src.phoenix_optimizer import create_adan_optimizer, create_focal_loss
+    from src.physics_informed_augmentation import PhysicsInformedAugmentation
+    import config
 
 
 def set_random_seeds(seed=42):

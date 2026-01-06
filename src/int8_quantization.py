@@ -138,11 +138,18 @@ class INT8Quantizer:
         Returns:
             Model size in MB
         """
+        import tempfile
         # Save temporary file to get actual size
-        temp_path = '/tmp/temp_model.h5'
-        model.save(temp_path)
-        size_mb = os.path.getsize(temp_path) / (1024 * 1024)
-        os.remove(temp_path)
+        with tempfile.NamedTemporaryFile(suffix='.h5', delete=False) as tmp_file:
+            temp_path = tmp_file.name
+        
+        try:
+            model.save(temp_path)
+            size_mb = os.path.getsize(temp_path) / (1024 * 1024)
+        finally:
+            if os.path.exists(temp_path):
+                os.remove(temp_path)
+        
         return size_mb
     
     def validate_quantized_model(

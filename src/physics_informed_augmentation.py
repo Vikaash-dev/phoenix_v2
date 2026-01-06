@@ -303,10 +303,10 @@ class TensorFlowPhysicsAugmentation:
         """
         self.augmentor = augmentor
     
-    @tf.function
     def augment_tf(self, image: tf.Tensor) -> tf.Tensor:
         """
         TensorFlow-compatible augmentation function.
+        Note: Uses tf.py_function which runs in eager mode, not graph mode.
         
         Args:
             image: Input image tensor (H, W, C) in [0, 1] range

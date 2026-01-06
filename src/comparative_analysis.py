@@ -8,7 +8,7 @@ import json
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-from typing import Dict, List, Tuple
+from typing import Dict, List, Tuple, Optional
 import tensorflow as tf
 from tensorflow import keras
 from sklearn.metrics import (
