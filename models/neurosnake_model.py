@@ -347,12 +347,15 @@ def create_neurosnake_with_coordinate_attention(
         
     Reference:
         "Coordinate Attention for Efficient Mobile Network Design" (CVPR 2021)
-        Achieves 99.12% accuracy on brain tumor classification
+        Target accuracy: 99.12% on brain tumor classification (reported in medical imaging literature)
+        Note: Actual performance depends on dataset quality, training protocol, and deduplication
     """
     if not COORDINATE_ATTENTION_AVAILABLE:
         raise ImportError(
             "Coordinate Attention module not available. "
-            "Ensure models/coordinate_attention.py exists."
+            "Please ensure models/coordinate_attention.py exists. "
+            "If missing, copy from Phoenix Protocol repository or download from: "
+            "https://github.com/Vikaash-dev/Ai-research-paper-and-implementation-of-brain-tumor-detection-"
         )
     
     inputs = layers.Input(shape=input_shape, name='input')

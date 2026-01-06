@@ -181,6 +181,7 @@ def train_model(args):
         )
     else:
         print(f"  ERROR: Unknown model type: {args.model_type}")
+        print(f"  Available choices: 'neurosnake', 'neurosnake_ca', 'baseline'")
         return False
     
     print(f"  Model parameters: {model.count_params():,}")
