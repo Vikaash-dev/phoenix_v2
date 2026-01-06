@@ -90,8 +90,11 @@ def train_model(args):
     # Import training modules
     try:
         import tensorflow as tf
-        from models.neurosnake_model import create_neurosnake_model, create_baseline_model
-        from models.sevector_attention import SEVectorConvBlock
+        from models.neurosnake_model import (
+            create_neurosnake_model, 
+            create_neurosnake_with_coordinate_attention,
+            create_baseline_model
+        )
         from src.phoenix_optimizer import create_adan_optimizer, create_focal_loss
         from src.physics_informed_augmentation import PhysicsInformedAugmentation
         from src.data_deduplication import ImageDeduplicator
@@ -154,27 +157,31 @@ def train_model(args):
     print("-" * 80)
     
     if args.model_type == 'neurosnake':
-        print("  Creating NeuroSnake model...")
+        print("  Creating NeuroSnake model (standard)...")
         model = create_neurosnake_model(
             input_shape=(config.IMG_HEIGHT, config.IMG_WIDTH, config.IMG_CHANNELS),
             num_classes=config.NUM_CLASSES,
             use_mobilevit=True,
             dropout_rate=config.DROPOUT_RATE
         )
-    elif args.model_type == 'neurosnake_sevector':
-        print("  Creating NeuroSnake + SEVector model...")
-        # This would be a modified version with SEVector - implementation needed
-        print("  ⚠ SEVector variant not yet fully integrated, using standard NeuroSnake")
-        model = create_neurosnake_model(
+    elif args.model_type == 'neurosnake_ca':
+        print("  Creating NeuroSnake + Coordinate Attention model (RECOMMENDED)...")
+        print("  ✓ Position-preserving attention for superior medical imaging performance")
+        model = create_neurosnake_with_coordinate_attention(
             input_shape=(config.IMG_HEIGHT, config.IMG_WIDTH, config.IMG_CHANNELS),
             num_classes=config.NUM_CLASSES,
             use_mobilevit=True,
             dropout_rate=config.DROPOUT_RATE
+        )
+    elif args.model_type == 'baseline':
+        print("  Creating baseline CNN model (for comparison)...")
+        model = create_baseline_model(
+            input_shape=(config.IMG_HEIGHT, config.IMG_WIDTH, config.IMG_CHANNELS),
+            num_classes=config.NUM_CLASSES
         )
     else:
-        print("  Creating baseline CNN model...")
-        from models.cnn_model import create_cnn_model
-        model = create_cnn_model()
+        print(f"  ERROR: Unknown model type: {args.model_type}")
+        return False
     
     print(f"  Model parameters: {model.count_params():,}")
     print()
@@ -327,9 +334,9 @@ Examples:
                       help='Operation mode: train, test, or setup')
     
     # Training arguments
-    parser.add_argument('--model-type', type=str, default='neurosnake',
-                      choices=['neurosnake', 'neurosnake_sevector', 'baseline'],
-                      help='Model architecture to use')
+    parser.add_argument('--model-type', type=str, default='neurosnake_ca',
+                      choices=['neurosnake', 'neurosnake_ca', 'baseline'],
+                      help='Model architecture: neurosnake (standard), neurosnake_ca (Coordinate Attention - RECOMMENDED), baseline')
     parser.add_argument('--epochs', type=int, default=50,
                       help='Number of training epochs')
     parser.add_argument('--data-dir', type=str, default='data',
