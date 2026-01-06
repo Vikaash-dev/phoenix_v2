@@ -7,7 +7,7 @@ Prioritizes geometric adaptability and clinical robustness over vanity metrics.
 import tensorflow as tf
 from tensorflow import keras
 from tensorflow.keras import layers
-from dynamic_snake_conv import DynamicSnakeConv2D, SnakeConvBlock
+from models.dynamic_snake_conv import DynamicSnakeConv2D, SnakeConvBlock
 import config
 
 
