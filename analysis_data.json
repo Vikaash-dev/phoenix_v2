@@ -1,0 +1,38 @@
+{
+  "total_files": 32,
+  "total_docs": 15,
+  "total_lines": 8256,
+  "total_functions": 280,
+  "total_classes": 47,
+  "features": {
+    "P0_Critical": {
+      "Mixed Precision Training": false,
+      "K-Fold Cross-Validation": false,
+      "ONNX Export": true,
+      "TFLite Export": true,
+      "Reproducible Training": false,
+      "Advanced LR Schedulers": false,
+      "Gradient Clipping": false,
+      "Early Stopping": false,
+      "Patient-Level Splitting": false,
+      "Model Validation": false,
+      "Performance Benchmarking": false
+    },
+    "P1_Important": {
+      "Multi-GPU Training": true,
+      "Quantization-Aware Training": true,
+      "Advanced Augmentation": true,
+      "Hyperparameter Optimization": true,
+      "Adaptive Batch Sizing": true,
+      "Model Ensemble": true,
+      "Advanced Metrics": true
+    },
+    "P2_Nice_to_Have": {
+      "Docker Containerization": true,
+      "MLflow Integration": true,
+      "Model Versioning": true,
+      "A/B Testing": true,
+      "Data Caching": true
+    }
+  }
+}
