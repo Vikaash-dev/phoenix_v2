@@ -26,3 +26,23 @@ h5py>=3.7.0
 
 # Utilities
 pyyaml>=6.0
+
+# Phoenix Protocol Dependencies
+scipy>=1.9.0  # For physics-informed augmentation (elastic deformation, filters)
+imagehash>=4.3.0  # For perceptual hashing (deduplication)
+
+# P0 Critical Training Improvements
+tf2onnx>=1.14.0  # For ONNX export (cross-platform deployment)
+onnx>=1.13.0  # ONNX model format
+onnxruntime>=1.14.0  # ONNX Runtime for inference
+scikit-image>=0.20.0  # Advanced image processing
+
+# P1 Features (Important)
+tensorflow-model-optimization>=0.7.0  # Quantization-Aware Training (QAT)
+optuna>=3.1.0  # Hyperparameter optimization
+fastapi>=0.95.0  # API serving
+uvicorn>=0.21.0  # ASGI server
+
+# P2 Features (Nice-to-have)
+mlflow>=2.2.0  # Experiment tracking and model registry
+docker>=6.0.0  # Docker SDK for Python
