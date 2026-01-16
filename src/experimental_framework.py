@@ -236,20 +236,32 @@ class ExperimentalFramework:
         
         aggregated = self._aggregate_results(fold_results)
         
+        # Pre-convert numpy types for efficient JSON serialization
+        serializable_fold_results = []
+        for fold_result in fold_results:
+            serializable_result = {}
+            for key, value in fold_result.items():
+                if isinstance(value, (np.integer, np.floating)):
+                    serializable_result[key] = float(value) if isinstance(value, np.floating) else int(value)
+                elif isinstance(value, np.ndarray):
+                    serializable_result[key] = value.tolist()
+                else:
+                    serializable_result[key] = value
+            serializable_fold_results.append(serializable_result)
+        
         # Save results
         results = {
             'experiment_name': self.experiment_name,
             'n_folds': self.n_folds,
             'random_seed': self.random_seed,
-            'fold_results': fold_results,
+            'fold_results': serializable_fold_results,
             'aggregated': aggregated,
             'timestamp': datetime.now().isoformat()
         }
         
         results_file = os.path.join(self.experiment_dir, 'results.json')
         with open(results_file, 'w') as f:
-            # Convert numpy types to Python types for JSON serialization
-            json.dump(results, f, indent=2, default=self._numpy_to_python)
+            json.dump(results, f, indent=2)
         
         self.logger.info(f"\nResults saved to: {results_file}")
         

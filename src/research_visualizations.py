@@ -14,10 +14,13 @@ Features:
 
 import os
 from typing import Dict, List, Optional, Tuple, Any
-import numpy as np
+
+# Set matplotlib backend BEFORE any other matplotlib imports
 import matplotlib
 matplotlib.use('Agg')  # Non-interactive backend
+
 import matplotlib.pyplot as plt
+import numpy as np
 import seaborn as sns
 from sklearn.metrics import confusion_matrix, roc_curve, auc
 import logging

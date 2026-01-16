@@ -2,7 +2,7 @@
   "experiment_configuration": {
     "name": "NeuroSnake Brain Tumor Detection - SOTA Comparison and Ablation Studies",
     "version": "1.0.0",
-    "date": "2024-01-01",
+    "date": "YYYY-MM-DD (set dynamically during experiment execution)",
     "random_seed": 42
   },
   "data_configuration": {
