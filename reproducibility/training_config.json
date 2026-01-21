@@ -1,0 +1,187 @@
+{
+  "experiment_configuration": {
+    "name": "NeuroSnake Brain Tumor Detection - SOTA Comparison and Ablation Studies",
+    "version": "1.0.0",
+    "date": "YYYY-MM-DD (set dynamically during experiment execution)",
+    "random_seed": 42
+  },
+  "data_configuration": {
+    "image_size": [224, 224, 3],
+    "normalization": "min-max [0, 1]",
+    "augmentation": {
+      "physics_informed": true,
+      "elastic_deformation": {
+        "sigma": 10,
+        "alpha": 100
+      },
+      "intensity_variation": 0.2,
+      "gaussian_noise": {
+        "sigma": 0.01
+      },
+      "rotation_range": 20,
+      "width_shift_range": 0.2,
+      "height_shift_range": 0.2,
+      "zoom_range": 0.2,
+      "horizontal_flip": true
+    },
+    "deduplication": {
+      "method": "perceptual_hash",
+      "threshold": 5,
+      "algorithm": "pHash"
+    }
+  },
+  "cross_validation": {
+    "method": "stratified_k_fold",
+    "n_folds": 5,
+    "shuffle": true,
+    "stratify": true,
+    "patient_level_split": true
+  },
+  "training_configuration": {
+    "optimizer": {
+      "name": "Adam",
+      "learning_rate": 0.0001,
+      "beta_1": 0.9,
+      "beta_2": 0.999,
+      "epsilon": 1e-7
+    },
+    "loss": {
+      "name": "categorical_crossentropy",
+      "class_weighting": "auto"
+    },
+    "metrics": [
+      "accuracy",
+      "precision",
+      "recall",
+      "f1_score",
+      "roc_auc",
+      "sensitivity",
+      "specificity"
+    ],
+    "epochs": 50,
+    "batch_size": 32,
+    "validation_split": 0.15,
+    "early_stopping": {
+      "monitor": "val_loss",
+      "patience": 10,
+      "restore_best_weights": true
+    },
+    "reduce_lr": {
+      "monitor": "val_loss",
+      "factor": 0.5,
+      "patience": 5,
+      "min_lr": 1e-7
+    },
+    "regularization": {
+      "dropout_rate": 0.3,
+      "fc_dropout_rate": 0.5,
+      "l2_weight_decay": 1e-5
+    }
+  },
+  "model_configurations": {
+    "NeuroSnake": {
+      "architecture": "NeuroSnake with Dynamic Snake Conv + Coordinate Attention + MobileViT",
+      "filters": [32, 64, 128, 256, 512],
+      "use_mobilevit": true,
+      "mobilevit_heads": 8,
+      "mobilevit_mlp_ratio": 2,
+      "dropout_rate": 0.3,
+      "fc_units": [256, 128],
+      "fc_dropout": [0.5, 0.5]
+    },
+    "ResNet50": {
+      "architecture": "ResNet50 (ImageNet pretrained)",
+      "freeze_base": true,
+      "fine_tune_layers": 0,
+      "fc_units": [256, 128],
+      "fc_dropout": [0.5, 0.5]
+    },
+    "EfficientNetB0": {
+      "architecture": "EfficientNetB0 (ImageNet pretrained)",
+      "freeze_base": true,
+      "fine_tune_layers": 0,
+      "fc_units": [256, 128],
+      "fc_dropout": [0.5, 0.5]
+    },
+    "VGG16": {
+      "architecture": "VGG16 (ImageNet pretrained)",
+      "freeze_base": true,
+      "fine_tune_layers": 0,
+      "fc_units": [256, 128],
+      "fc_dropout": [0.5, 0.5]
+    },
+    "Baseline_CNN": {
+      "architecture": "Standard CNN (from arXiv:2504.21188)",
+      "filters": [32, 64, 128, 256],
+      "kernel_size": 3,
+      "pooling": "max",
+      "dropout_rate": 0.25,
+      "fc_units": [256, 128],
+      "fc_dropout": [0.5, 0.5]
+    }
+  },
+  "ablation_configurations": {
+    "full_model": {
+      "use_mobilevit": true,
+      "dropout_rate": 0.3,
+      "description": "Full NeuroSnake model with all components"
+    },
+    "without_mobilevit": {
+      "use_mobilevit": false,
+      "dropout_rate": 0.3,
+      "description": "Remove MobileViT blocks to assess global context contribution"
+    },
+    "dropout_0_1": {
+      "use_mobilevit": true,
+      "dropout_rate": 0.1,
+      "description": "Lower dropout to test regularization effect"
+    },
+    "dropout_0_5": {
+      "use_mobilevit": true,
+      "dropout_rate": 0.5,
+      "description": "Higher dropout to test regularization effect"
+    }
+  },
+  "statistical_testing": {
+    "methods": [
+      "paired_t_test",
+      "wilcoxon_signed_rank"
+    ],
+    "alpha": 0.05,
+    "confidence_interval": 0.95,
+    "bootstrap_samples": 1000,
+    "effect_size": "cohen_d"
+  },
+  "visualization_configuration": {
+    "dpi": 300,
+    "formats": ["png", "pdf"],
+    "font_family": "serif",
+    "font_size": 12,
+    "color_palette": {
+      "NeuroSnake": "#2ecc71",
+      "ResNet50": "#3498db",
+      "EfficientNetB0": "#e74c3c",
+      "VGG16": "#9b59b6",
+      "Baseline_CNN": "#f39c12"
+    }
+  },
+  "hardware_configuration": {
+    "gpu": "NVIDIA RTX 3090 / Tesla V100 / A100",
+    "cpu_cores": 8,
+    "ram_gb": 32,
+    "storage_gb": 100,
+    "framework": "TensorFlow 2.10.0",
+    "cuda_version": "11.2",
+    "cudnn_version": "8.1"
+  },
+  "output_structure": {
+    "base_dir": "research_results/",
+    "subdirectories": {
+      "sota_comparison": "SOTA model comparison results",
+      "ablation_studies": "Ablation study results",
+      "figures": "Publication-quality figures (300 DPI)",
+      "tables": "Markdown tables for paper",
+      "experiments": "Individual experiment logs"
+    }
+  }
+}

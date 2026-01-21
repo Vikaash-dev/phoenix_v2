@@ -1,0 +1,15 @@
+{
+  "experiment_seed": 42,
+  "numpy_seed": 42,
+  "tensorflow_seed": 42,
+  "python_hash_seed": 42,
+  "random_seed": 42,
+  "fold_seeds": [42, 43, 44, 45, 46],
+  "description": "Random seeds used for all experiments to ensure reproducibility",
+  "notes": [
+    "All experiments use base seed of 42",
+    "Each fold uses base_seed + fold_index for deterministic variation",
+    "Environment variables TF_DETERMINISTIC_OPS=1 and TF_CUDNN_DETERMINISTIC=1 are set",
+    "PYTHONHASHSEED is set to 42 before any Python operations"
+  ]
+}
