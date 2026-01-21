@@ -92,3 +92,24 @@ research_results/*/
 !research_results/sota_comparison/.gitkeep
 !research_results/ablation_studies/.gitkeep
 !research_results/tables/.gitkeep
+
+# Version-specific virtual environments
+v1/venv/
+v2/venv/
+v3/venv/
+
+# Version-specific model artifacts
+v1/models/saved_models/
+v2/models/saved_models/
+v3/models/saved_models/
+v*/models/*.h5
+v*/models/*.pb
+v*/models/*.keras
+v*/models/*.onnx
+v*/models/*.tflite
+
+# Version-specific logs and results
+v*/logs/
+v*/results/
+v*/checkpoint/
+v*/tensorboard_logs/
