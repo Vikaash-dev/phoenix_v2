@@ -34,20 +34,43 @@ Complete scientific discovery simulation cycle:
 ## Novel Contributions
 
 ### Spectral Gating Block Implementation
+
+The Spectral Gating Block is implemented in `src/models/spectral_gating.py` (available in PR #12).
+
+**Conceptual Overview**:
 ```python
 class SpectralGatingBlock:
     """
     Parameter-efficient alternative to attention mechanisms.
     Uses FFT for global receptive fields with O(N log N) complexity.
+    
+    Complete implementation available in PR #12.
     """
+    def __init__(self, channels, **kwargs):
+        super().__init__(**kwargs)
+        self.channels = channels
+        # Learnable spectrum initialized in build() method
+        
+    def build(self, input_shape):
+        # Initialize learnable spectral weights
+        self.learnable_spectrum = self.add_weight(
+            name='spectral_weights',
+            shape=(input_shape[1], input_shape[2], self.channels),
+            initializer='glorot_uniform',
+            trainable=True
+        )
+    
     def call(self, x):
         # FFT-based global gating
         freq_x = tf.signal.fft2d(tf.cast(x, tf.complex64))
-        # Spectral filtering
-        gated = freq_x * self.learnable_spectrum
+        # Spectral filtering with learned weights
+        gated = freq_x * tf.cast(self.learnable_spectrum, tf.complex64)
         # Inverse FFT
-        return tf.signal.ifft2d(gated)
+        output = tf.signal.ifft2d(gated)
+        return tf.cast(tf.math.real(output), x.dtype)
 ```
+
+**Note**: This is a simplified illustration. The complete implementation in PR #12 includes additional optimizations and error handling.
 
 ### Performance Comparison
 | Metric | v1 Baseline | v2 SOTA | v3 Spectral |
