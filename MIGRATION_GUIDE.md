@@ -5,17 +5,24 @@ This guide helps you migrate between different versions of the brain tumor detec
 ## Quick Reference
 
 ```bash
-# Use v1 (baseline)
-cd v1 && pip install -r requirements.txt
+# Use v1 (baseline) - YOU'RE ALREADY HERE!
+# The root directory IS v1
+python one_click_train_test.py --mode train --model-type neurosnake_ca
 
 # Use v2 (SOTA upgrade)
 cd v2 && pip install -r requirements.txt
+# (When PR #11 is merged)
 
 # Use v3 (Spectral-Snake)
 cd v3 && pip install -r requirements.txt
+# (When PR #12 is merged)
 ```
 
+**Note**: The root directory is v1. You don't need to "migrate to v1" - you're already using it!
+
 ## Migrating from v1 to v2
+
+**Important**: v1 is the root directory, so you're already using it!
 
 ### What Changes
 - **Training Infrastructure**: Adds AMP (Mixed Precision) and K-Fold validation
@@ -25,11 +32,11 @@ cd v3 && pip install -r requirements.txt
 
 ### Step-by-Step Migration
 
-1. **Install Additional Dependencies**
+1. **Navigate to v2 Directory**
    ```bash
    cd v2
    pip install -r requirements.txt
-   # Additional packages: tf2onnx, onnxruntime
+   # Note: Additional packages like tf2onnx, onnxruntime
    ```
 
 2. **Update Training Code**

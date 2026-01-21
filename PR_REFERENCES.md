@@ -2,13 +2,14 @@
 
 This document tracks the source PRs for each version.
 
-## Version 1 (Main Branch)
-- **Source**: Main branch (merged PRs #1, #2, #3)
+## Version 1 (Root Directory)
+- **Source**: Main branch (current state)
 - **PR #1**: Initial implementation - "Implement AI brain tumor detection system with research paper and CNN implementation"
 - **PR #2**: "Implement Phoenix Protocol: Complete NeuroSnake Implementation with ALL Features"
 - **PR #3**: "Add research experimental validation framework for publication-ready results"
-- **Status**: Merged to main
+- **Status**: Production-ready in root directory
 - **Commit**: 88683fc
+- **Location**: Root directory (you're here by default)
 
 ## Version 2 (SOTA Upgrade)
 - **Source PR**: #11

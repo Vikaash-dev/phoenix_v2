@@ -8,9 +8,10 @@ This repository contains multiple versions of the brain tumor detection system, 
 
 The versions are organized by **architectural importance and complexity**, with higher versions representing more advanced implementations:
 
-### v1 - Phoenix Protocol Baseline
+### v1 - Phoenix Protocol Baseline (Root Directory)
 **Status**: Production-Ready  
 **Focus**: Foundational implementation  
+**Location**: Root directory (main working area)
 
 Core implementation of the Phoenix Protocol featuring:
 - NeuroSnake architecture with Dynamic Snake Convolutions
@@ -24,7 +25,7 @@ Core implementation of the Phoenix Protocol featuring:
 - Getting started with the project
 - Production deployments with proven stability
 
-**Quick Start**: See `v1/README.md`
+**Quick Start**: See root `README.md` or run `./start-v1.sh`
 
 ---
 
@@ -162,25 +163,29 @@ These optimizations can be applied to any version as needed.
 ## Repository Structure
 
 ```
-├── v1/                 # Phoenix Protocol Baseline
-│   ├── src/           # Core implementation
-│   ├── models/        # Model architectures
-│   └── README.md      # v1 documentation
+├── src/                # v1 Core implementation (ROOT = v1)
+├── models/             # v1 Model architectures
+├── README.md           # v1/Root documentation
+├── requirements.txt    # v1 dependencies
+├── [root files]        # v1 baseline implementation
 │
-├── v2/                 # SOTA Upgrade
+├── v2/                 # SOTA Upgrade (future integration)
 │   ├── src/           # Enhanced implementation
 │   ├── models/        # Enhanced architectures
 │   └── README.md      # v2 documentation
 │
-├── v3/                 # Spectral-Snake Architecture
+├── v3/                 # Spectral-Snake Architecture (future integration)
 │   ├── src/           # Novel implementation
 │   ├── models/        # Spectral architectures
 │   └── README.md      # v3 documentation
 │
 ├── VERSION_GUIDE.md   # This file
-├── README.md          # Root documentation
-└── [original files]   # Reference documentation
+├── MIGRATION_GUIDE.md # Migration instructions
+└── start-v*.sh        # Quick-start scripts
 ```
+
+**Note**: The root directory IS v1. You work in root by default (stable baseline).
+v2 and v3 are separate experimental directories for advanced features.
 
 ## Contributing
 
