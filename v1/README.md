@@ -63,3 +63,9 @@ For more details, see the root documentation files:
 - `../PHOENIX_PROTOCOL.md`
 - `../RESEARCH_PAPER_FINAL.md`
 - `../TECHNICAL_SPECS.md`
+
+## Additional Resources
+
+- [VERSION_GUIDE.md](../VERSION_GUIDE.md) - Compare all versions
+- [MIGRATION_GUIDE.md](../MIGRATION_GUIDE.md) - Migrate to v2 or v3
+- [PR_REFERENCES.md](../PR_REFERENCES.md) - Source pull requests

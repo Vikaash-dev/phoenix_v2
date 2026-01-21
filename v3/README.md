@@ -136,3 +136,9 @@ For complete implementation and research details, see:
 - Full research paper in `papers/spectral_snake_paper.tex`
 - Experimental framework in `src/research/`
 - PR #12 for complete code changes
+
+## Additional Resources
+
+- [VERSION_GUIDE.md](../VERSION_GUIDE.md) - Compare all versions
+- [MIGRATION_GUIDE.md](../MIGRATION_GUIDE.md) - Migrate between versions
+- [PR_REFERENCES.md](../PR_REFERENCES.md) - Source pull requests

@@ -91,3 +91,9 @@ For implementation details, see:
 - PR #11 description and commits
 - Research Paper 2.0 documentation
 - Updated PHOENIX_PROTOCOL.md with SOTA enhancements
+
+## Additional Resources
+
+- [VERSION_GUIDE.md](../VERSION_GUIDE.md) - Compare all versions
+- [MIGRATION_GUIDE.md](../MIGRATION_GUIDE.md) - Migrate from v1 or to v3
+- [PR_REFERENCES.md](../PR_REFERENCES.md) - Source pull requests
