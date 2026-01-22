@@ -1,11 +1,27 @@
 # Brain Tumor Detection Using Deep Learning - Phoenix Protocol
 
-**A Complete, Production-Ready Neuro-Oncology AI System**
+**A Complete, Production-Ready Neuro-Oncology AI System with Multiple Research Versions**
 
 An end-to-end deep learning solution for detecting brain tumors from MRI images, featuring the advanced **NeuroSnake architecture** with Dynamic Snake Convolutions, Coordinate Attention, and EfficientQuant hybrid quantization.
 
-**🎉 Status**: 100% Feature Complete | Production Roadmap Ready | Edge-Optimized  
+**🎉 Status**: 100% Feature Complete | 3 Versions Available | Production Roadmap Ready | Edge-Optimized  
 **🏆 Grade**: A+ (100/100) | 24/24 Features | 220+ KB Documentation
+
+---
+
+## 🚀 NEW: Multiple Versions Available
+
+This repository contains **three versions** of the brain tumor detection system, representing different architectural approaches:
+
+- **v1 - Phoenix Protocol Baseline (ROOT)**: Current directory - stable production implementation
+- **[v2 - SOTA Upgrade](v2/)**: Advanced training with AMP, K-Fold, ONNX (PR #11)
+- **[v3 - Spectral-Snake Architecture](v3/)**: Novel FFT-based gating, highest performance (PR #12)
+
+**📖 See [VERSION_GUIDE.md](VERSION_GUIDE.md) for detailed comparison and selection guide.**
+
+**Note**: You're working in v1 (root directory) by default. This is the stable baseline.
+
+---
 
 ## 📖 Complete User Journey
 
@@ -22,6 +38,7 @@ See [CONVERSATION_HISTORY.md](CONVERSATION_HISTORY.md) for complete development 
 
 ## 📋 Table of Contents
 
+- [Versions](#-versions-new)
 - [Quick Start](#-quick-start-5-minutes)
 - [Overview](#-overview)
 - [Phoenix Protocol](#-phoenix-protocol)
@@ -39,6 +56,20 @@ See [CONVERSATION_HISTORY.md](CONVERSATION_HISTORY.md) for complete development 
 - [Security](#-security)
 - [Contributing](#-contributing)
 - [License](#-license)
+
+## 📦 Versions (NEW)
+
+This repository contains three architectural versions:
+
+| Version | Description | Accuracy | Params | Speed | Location | Best For |
+|---------|-------------|----------|--------|-------|----------|----------|
+| **v1** | Phoenix Protocol Baseline | 95.2% | 2.1M | 45ms | **Root (current)** | Stability & Production |
+| **[v2](v2/)** | SOTA Upgrade (AMP, K-Fold, ONNX) | 95.8% | 2.3M | 42ms | `v2/` directory | Advanced Training |
+| **[v3](v3/)** | Spectral-Snake (FFT-based) | **96.8%** | **1.8M** | **35ms** | `v3/` directory | Research & Edge |
+
+**See [VERSION_GUIDE.md](VERSION_GUIDE.md) for complete comparison and migration guide.**
+
+**Default**: You're using v1 (root directory). Run `./start-v1.sh` to set up environment.
 
 ## ⚡ Quick Start (5 Minutes)
 
