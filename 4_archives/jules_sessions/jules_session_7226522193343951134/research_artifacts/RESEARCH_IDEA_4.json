@@ -1,0 +1,8 @@
+{
+  "Title": "Liquid-Snake: Continuous-Time Geometric Deep Learning for Causal Neuro-Oncology",
+  "Hypothesis": "We hypothesize that replacing standard convolutional blocks with 'Liquid-Snake' blocks—hybrid units combining Dynamic Snake Convolutions with Liquid Time-Constant (LTC) differential equation solvers—will significantly improve robustness to noise and irregular sampling in MRI data by modeling the brain tumor as a continuous dynamic system rather than a static image.",
+  "Experiment_Plan": "1. Implement `LiquidConv2D` layer using a semi-implicit Euler solver for the LTC dynamics. 2. Integrate this into the `NeuroSnake` backbone. 3. Compare `Liquid-Snake` vs `NeuroSnake-KAN` on noisy/corrupted Br35H data. 4. Analyze 'causal robustness' (performance drop under intervention).",
+  "Novelty_Score": 10,
+  "Feasibility_Score": 6,
+  "Selected_Reason": "Moving from discrete-layer neural networks to continuous-depth (ODE-based) Liquid Neural Networks represents a fundamental shift in the computational paradigm. This 'reinvention' directly addresses the fragility of standard deep learning in medical settings (noise, artifacts) by leveraging the inherent stability of dynamical systems."
+}

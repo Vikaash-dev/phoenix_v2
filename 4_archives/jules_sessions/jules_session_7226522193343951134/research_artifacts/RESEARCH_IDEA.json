@@ -1,0 +1,8 @@
+{
+  "Title": "Spectral-Snake: Frequency-Enhanced Dynamic Convolutions for efficient Brain Tumor Detection",
+  "Hypothesis": "We hypothesize that replacing the heavy MobileViT block with a parameter-efficient Spectral Gating mechanism (combining FFT and Dynamic Snake Convolutions) will achieve comparable or superior accuracy and robustness while significantly reducing computational cost and 'Med-Hammer' vulnerability.",
+  "Experiment_Plan": "1. Implement `SpectralGatingBlock` using `tf.signal.fft2d` and `tf.signal.ifft2d`. 2. Integrate this block into the NeuroSnake architecture, replacing the MobileViT stage. 3. Compare `NeuroSnake-ViT` (Baseline) vs `NeuroSnake-Spectral` (Ours) on the Br35H dataset. 4. Analyze parameter count, inference speed, and accuracy.",
+  "Novelty_Score": 9,
+  "Feasibility_Score": 10,
+  "Selected_Reason": "While Vision Mamba is trending, it requires complex CUDA kernels often unavailable in standard TensorFlow environments. Spectral methods offer similar 'global receptive field' benefits (via the Fourier Transform property) with O(N log N) complexity and full standard library compatibility, making it a superior engineering choice for this specific environment."
+}

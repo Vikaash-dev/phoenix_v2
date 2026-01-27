@@ -1,0 +1,8 @@
+{
+  "Title": "Hyper-Liquid Snake: Adaptive Neural Dynamics via Input-Conditioned Time Constants",
+  "Hypothesis": "We hypothesize that a Hypernetwork-driven Liquid Neural Network, where the time-constant (tau) and mixing weights of the LiquidConv2D layer are dynamically predicted from the input image's entropy and frequency content, will achieve superior generalization on heterogeneous MRI data compared to static Liquid-Snake models.",
+  "Experiment_Plan": "1. Implement `HyperLiquidBlock`: A small MLP that takes global image statistics (or MobileViT features) as input and outputs the `tau` and `recurrent_kernel` for the Liquid layer. 2. Integrate into `NeuroSnake` backbone. 3. Compare static `Liquid-Snake` vs adaptive `Hyper-Liquid` on a simulated multi-site dataset (varying contrast/noise).",
+  "Novelty_Score": 9,
+  "Feasibility_Score": 7,
+  "Selected_Reason": "While Hypernetworks exist (e.g., for style transfer or domain adaptation), using them to dynamically modulate the *differential equation dynamics* (time constants) of a Liquid Network in medical imaging is a highly novel intersection of Meta-Learning and Causal/Dynamic Deep Learning."
+}

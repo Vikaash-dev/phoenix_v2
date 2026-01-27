@@ -1,0 +1,8 @@
+{
+  "Title": "TTT-KAN: Test-Time Training with Kolmogorov-Arnold Networks for Robust Zero-Shot Generalization",
+  "Hypothesis": "We hypothesize that upgrading the KAN classification head to support Test-Time Training (TTT) via a self-supervised reconstruction objective will significantly improve accuracy (aiming for >98%) on unseen data by adapting the spline activations to the specific test sample distribution.",
+  "Experiment_Plan": "1. Implement `TTT_KAN_Layer` which supports a secondary forward pass for self-supervised learning (e.g., masking parts of the input and reconstructing). 2. Integrate this into `NeuroSnake-KAN`. 3. Simulate TTT inference loop (optimization step during inference). 4. Compare `NeuroSnake-KAN` (Static) vs `TTT-KAN` (Adaptive) on simulated out-of-distribution samples.",
+  "Novelty_Score": 10,
+  "Feasibility_Score": 7,
+  "Selected_Reason": "Test-Time Training is a cutting-edge technique (ICML 2024/2025) for handling distribution shifts. Applying it to KANs (which have learnable activation shapes) is a completely novel intersection. The learnable splines offer a unique degree of freedom for adaptation that standard MLPs lack."
+}

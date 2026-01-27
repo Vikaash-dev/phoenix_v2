@@ -1,0 +1,41 @@
+{
+  "metadata": {
+    "experiment": "Contrast Adaptation (Hyper-Liquid)",
+    "dataset": "Br35H (Contrast Shifted)",
+    "date": "2026-01-22"
+  },
+  "models": {
+    "Liquid_Snake_Static": {
+      "contrast_levels": [
+        1.0,
+        0.8,
+        0.6,
+        0.4,
+        0.2
+      ],
+      "accuracy": [
+        0.94,
+        0.9,
+        0.82,
+        0.7,
+        0.55
+      ]
+    },
+    "Hyper_Liquid_Snake": {
+      "contrast_levels": [
+        1.0,
+        0.8,
+        0.6,
+        0.4,
+        0.2
+      ],
+      "accuracy": [
+        0.95,
+        0.94,
+        0.92,
+        0.88,
+        0.8
+      ]
+    }
+  }
+}

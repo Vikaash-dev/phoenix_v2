@@ -1,0 +1,191 @@
+url,title,content,score,raw_content
+https://pmc.ncbi.nlm.nih.gov/articles/PMC9872362/,MRI-based brain tumor detection using convolutional deep ...,"In another research, a CNN and an extreme learning machine were applied to diagnose brain tumors. The proposed model utilized four convolution layers and batch-normalization layers with 16-, 32-, 64- and 128-filter lengths (3\3). Four ReLU layers and three max-pooling layers were used in the proposed CNN with stride size [2, 2]. The model only had one fully connected layer with three types of classes. Feature vectors extracted by the mentioned convolution and layers were used as the input of KE-CNN (kernel CNN). The KE-CNN had 91.28% accuracy for classifying brain tumors . However, our proposed 2D CNN and auto-encoder network achieved 96.47% and 95.63% accuracy, respectively. We used several layers of convolution for both networks and created complex networks, which can be justified by [...] According to the literature, some studies have used the famous T1-weighted contrast-enhanced MRI dataset (Figshare dataset), which contained 3064 MRI images of the human brain for tumor detection with computational approaches like neural networks. Studies using this dataset for the classification of brain tumors are listed in Table 11. It should be noted that the study employed another dataset that included 3264 MRI images. This dataset contained four categories of MRI images, namely glioma, meningioma, and pituitary gland tumors and healthy brains (no tumors). Badža and Barjaktarović  conducted brain tumor detection using a CNN developed in MATLAB R2018a. Their proposed CNN had two convolutional layers of 64- and 16-filter lengths. The classification block had two fully connected layers: [...] In the modified 2D CNN, several convolution layers are considered; all layers in this hierarchical network have a 2\2 kernel function. This network consists of eight convolutional layers and four pooling layers; after all convolution layers, batch-normalization layers were applied. The training process was accomplished over 100 training epochs, and the batch size was 16. Each epoch last 7 s.",0.7147281,
+https://medium.com/@ranzeetraut00/advancing-brain-tumor-classification-with-convolutional-neural-networks-cnn-harnessing-deep-32a792671c,Advancing Brain Tumor Classification with Convolutional Neural ...,"In the context of brain tumor classification, CNNs have been extensively used to analyze medical imaging data, such as MRI scans. By training on large datasets of labeled images, CNN-based deep learning algorithms can automatically identify and classify brain tumors with high accuracy, assisting healthcare professionals in diagnosis and treatment planning.
+
+CNN-based deep learning has shown tremendous potential in enhancing the accuracy and efficiency of brain tumor classification, leading to improved patient outcomes and personalized care. As research and technological advancements continue, CNNs are expected to play a significant role in advancing medical imaging analysis and revolutionizing the field of brain tumor diagnosis and treatment. [...] Diagnosing brain tumors often involves a combination of medical history evaluation, physical examination, and advanced imaging techniques, such as magnetic resonance imaging (MRI), computed tomography (CT), or positron emission tomography (PET) scans. Once diagnosed, treatment options for brain tumors may include surgery, radiation therapy, chemotherapy, targeted therapy, or a combination thereof, depending on the tumor type, location, and individual patient factors. [...] This paper utilizes a convolutional neural network (CNN) and its variants, such as AlexNet , DenseNet-(121, 161) , ResNet-(18, 34, 50) , SqueezeNet-(10, 11) , and VGGNet-(11, 13) , for the classification of brain tumor images from smear images of tumor gathered on the human brain and Detection dataset. Different architectures of CNNs have been experimented with, and the results are portrayed and validated using the validation criteria:",0.7125728,
+https://www.nature.com/articles/s41598-024-71893-3,Brain tumor detection and classification in MRI using hybrid ViT and ...,"obtaining a significant 61.0% accuracy in classifying survival categories. Diverse network architectures and training strategies may affect the further refinement of this study. The study21."") employed a DL CNN model to automatically detect brain tumors using augmented MRI data from the Br35H dataset, achieving 98.99% accuracy. Future research could explore advanced architectures and integrate multimodal data to improve the interpretability of this study for more robust clinical applications in brain tumor diagnostics. [...] In this system, the model’s structure incorporates multiple layers and adjustable parameters. Each MRI image goes through a series of ViT layers first, then through GRU layers for processing13.""),14.""). By integrating these components, we aim to improve feature representation and temporal modeling for robust decision-making in the final stage, making it a comprehensive and effective tool for accurate brain tumor detection and classification in medical imaging.
+
+In this research, we achieved the following major contributions: [...] Chapter   Google Scholar
+50. Choudhury, C. L., Mahanty, C., Kumar, R. & Mishra, B. K. Brain tumor detection and classification using convolutional neural network and deep neural network. In 2020 International Conference on Computer Science, Engineering and Applications (ICCSEA) (ed. Choudhury, C. L.) 1–4 (IEEE, 2020).
+
+    Google Scholar
+51. Bhanothu, Y., Kamalakannan, A. & Rajamanickam, G. Detection and classification of brain tumor in MRI images using deep convolutional network. In 2020 6th International Conference on Advanced Computing and Communication Systems (ICACCS) (ed. Bhanothu, Y.) 248–252 (IEEE, 2020).",0.64773196,
+https://link.springer.com/article/10.1186/s43055-025-01567-1,"Brain tumor diagnosis techniques key achievements, lessons ...","In [30 A novel data augmentation-based brain tumor detection using convolutional neural network. Appl Sci 12(8):3773"")], researchers applied various CNN models with data augmentation to detect brain tumors from MR images. Six pretrained networks were used to distinguish between tumor and normal tissues, with VGG-16 achieving the highest accuracy of 0.96. Salama et al. [31 A novel framework for brain tumor detection based on convolutional variational generative models. Multimed Tools Appl 81:16441–16454. [...] "")] applied 6 ML techniques for detection: SVM, NN, random forest (RF), CN2 rule induction (CN2), Naive Bayes (NB), and decision tree (DT) methods. SVM outperformed the other methods, achieving 95.3% accuracy. The authors of [26 Combining CNN features with voting classifiers for optimizing performance of brain tumor classification. Cancers 15:1767"")] utilized a hybrid approach, employing an optimizer and logistic regression (LR) in conjunction with a set of features extracted by deep convolutional layers, to effectively discriminate between individuals with and without tumors. The highest level of accuracy achieved was 99.9%. The researchers utilized the publicly accessible brain tumor dataset that is hosted on the Kaggle platform. Details of the detection techniques are [...] "")] presented a model incorporating ResNet-50 and global average pooling. They used a 3064-image dataset of three tumor brain magnetic resonance images (meningioma, glioma, and pituitary). They attained a mean accuracy of 97.08% with data augmentation and 97.48% without data augmentation. Tiwari et al. [43 CNN based multiclass brain tumor detection using medical imaging. Comput Intell Neurosci 2022:1830010. 
+                  
+                  
+                "")] demonstrated a CNN for brain tumor categorization. They developed a model that could categorize brain images such as glioma, meningioma, pituitary tumor, or no tumor. They achieved 99% accuracy.",0.64719695,
+https://www.mdpi.com/2313-433X/11/2/54,A Novel 3D Magnetic Resonance Imaging Registration Framework ...,"To enhance the local features of input images, Conv3D was introduced in the proposed model. However, conventional convolution is not sufficiently sensitive to elongated local structures in medical images. For this reason, dynamic snake convolution (DSC)  was incorporated into our model. Therefore, we extended this convolution to three-dimensional space and optimized it to better adapt to our architecture. Originally designed to improve the segmentation accuracy and efficiency of complex and variable fine features, such as blood vessels and roads, dynamic snake convolution focuses adaptively on slender and intricate local structures. This enables the precise extraction of tubular and complex patterns. In this study, MRI images of the human brain, especially in the cerebellum, exhibited [...] As shown in Figure 5, dynamic snake convolution is based on the ideas of dynamic convolution and deformable kernel convolution [24,25]. Given the standard 3D convolution coordinates K, with the convolution center at Ki = (xi, yi, zi), a 3 × 3 × 3 convolution kernel can be expressed as
+
+Figure 5.
+Schematic diagram of 3D dynamic snake convolution. [...] To enhance the flexibility of the convolution kernel and enable it to capture the complex geometric features of the target, dynamic snake convolution introduces a deformable offset, denoted as Δ. However, when dealing with elongated structures, allowing the model complete freedom to learn the deformable offsets can cause the receptive field to deviate from the target. This issue is addressed by employing an iterative strategy, as shown in Figure 5. This strategy incrementally selects the next position of the target for observation, ensuring continuity in feature focus and preventing the receptive field from over-expanding due to large deformable offsets.",0.62330866,
+https://pmc.ncbi.nlm.nih.gov/articles/PMC11890586/,Automated multi-class MRI brain tumor classification and ... - NIH,"where,
+
+Image 17: graphic file with name 41598_2025_92776_Article_Equ7.gif7
+
+consequently, the integration of deformable convolution within CNNBlock can serve as an effective alternative to conventional convolution, enabling the extraction and adaptation of geometric variations in feature representations.
+
+ to extract distinctive features from different brain patterns, aiming to capture meaningful semantic information from a specific ROI. This approach was inspired by Dai et al.27. By dynamically adjusting the offset, convolution, and sampling locations, a deformable convolutional network (DCN) is capable of robust object identification, even under geometric transformations, such as variations in size, posture, and viewpoint. [...] To mitigate overfitting and improve the generalization ability of the model, we first employed data augmentation techniques to generate a diverse set of MR images with varying intensity levels, facilitating more robust tumor detection and classification. In the next phase, we introduced a self-attention module integrated into a deformable convolutional network (DCN) architecture, drawing inspiration from the work of Dai et al.27. This technique leverages visual attention mechanisms to extract distinctive image attributes, enhancing model performance with minimal computational overhead. By analyzing the interconnections between convolutional features while incorporating spatial context, our approach significantly refines feature extraction for brain tumor classification. [...] The attention mechanism operates across three levels of feature representation to capture details at different scales: (1) low-level features, which encode general intensity patterns and fundamental texture information; (2) mid-level features, which extract structural representations such as the shape and spatial coherence of tumors; and (3) high-level features, which focus on the semantic understanding of tumor morphologies and abnormalities in cerebral tissue. Unlike standard convolutional networks that use fixed receptive fields, the proposed deformable attention mechanism allows for flexible, context-aware feature adaptation, making it highly effective in cases where tumors exhibit irregular growth patterns, variable contrast levels, and complex anatomical deformations. Additionally,",0.63098115,
+https://www.mdpi.com/2072-6694/17/1/121,Advanced Brain Tumor Classification in MR Images Using ...,"complementary strengths but often come with increased computational complexity. EfficientNet, noted for its parameter efficiency, achieved 98.86% accuracy in . Deep CNN models achieving the highest classification accuracies, such as Dense Efficient-Net (99.97%) , DeepTumorNet (99.67%) , TumorResNet (99.33%) , Hybrid MobileNetV2 (99.92%) , and Hybrid GoogLeNet (99.10%) , highlight the superior performance of advanced architectures in optimizing classification outcomes for complex medical imaging tasks. TumorGANet, which achieved an accuracy of 99.53% (see ), demonstrates exceptional performance in tumor detection. [...] dataset settings and demonstrating strong performance in tumor detection tasks [11,20,24,25,33,47]. However, the performance disparities across tumor categories, particularly in Glioma and Meningioma, underscore the need for advanced techniques to handle subtle and overlapping imaging features [8,26]. While Xception and MobileNetV2 excel in computational efficiency, emerging pre-trained models such as EfficientNet, Vision Transformers (ViT), Swin Transformer, ConvNeXt, and DeiT show significant promise for enhancing performance in tumor detection and clinical applications [17,21,48,49]. [...] The research will utilize the publicly available Brain Tumor MRI dataset, which includes images categorized into four distinct classes: Pituitary, Meningioma, Glioma, and No Tumor. The study employs state-of-the-art pre-trained deep learning models to assess their performance in brain tumor classification. Through the integration of these cutting-edge techniques, we aim to develop a model capable of providing reliable and scalable brain tumor classifications that can ultimately aid in clinical decision-making. Furthermore, the findings from this study contribute to the growing body of knowledge regarding the application of deep learning in medical image analysis, particularly for brain tumor detection, and open avenues for further research in AI-driven healthcare solutions. The main",0.58976424,
+https://pmc.ncbi.nlm.nih.gov/articles/PMC12699001/,Hybrid Deep Learning for Brain Tumor Detection - PubMed Central,"Classifying brain tumors has advanced significantly since the authors 22  introduced Capsule Networks (CapsNets). CapsNets are very useful in medical imaging because they can capture the spatial hierarchy between simple and complex things. By altering the maps in the CapsNet convolution layer, the study was able to achieve an accuracy of 86.50%. CapsNets provide an alternative method of managing spatial relationships in images, which may be useful for more complicated classification problems, even though their performance is lower than that of some CNN-based models. Using MRI data, Balamurugan et al 23  presented a method for categorizing Glioma pictures that used CNNs and Genetic Algorithms (GA). The proposed method automatically selected CNN structures using genetic algorithms to reach [...] Early and proper prediction of brain tumors is essential in the earlier planning of the treatment and enhancing patient outcomes. 4  Medical imaging plays a central role in this process, particularly Magnetic Resonance Imaging (MRI), which offers superior soft tissue contrast without ionizing radiation. However, interpreting MRI scans is inherently challenging, especially during the early stages of tumor development when visual differences between healthy and diseased tissue may be subtle. 5  These challenges are compounded by inter-observer variability and the high volume of clinical data, making manual analysis time-consuming and error-prone. 6 [...] |  |  |
+ --- |
+|  | (1) |
+
+A dense layer with softmax activation yields the final output, y:
+
+|  |  |
+ --- |
+|  | (2) |
+
+where W and b are the dense layer’s weights and biases, respectively.
+
+### Custom CNN
+
+#### Model Structure
+
+ The unique CNN model is made to extract characteristics unique to the identification of brain tumors. It starts with several convolutional layers and moves on to fully connected layers, dropout for regularization, batch normalization, and pooling layers.
+
+#### Parameters and Layers
+
+##### Input Layer
+
+ Accepts pictures with a size of (128, 128, 3).
+
+##### Conv2D Layers
+
+ Four convolutional layers including ReLU activation, kernel size (3, 3), and filters that increase sequentially (32, 64, 128, 256).
+
+##### Batch Layer",0.57666177,
+https://sciendo.com/2/v2/download/article/10.2478/pjmpe-2018-0007.pdf,Why and How. A Review on Brain Tumor Segmentation,"including the convolutional neural network, in a variety of image processing applications. Behrouz Alizadeh Savareh et al: Convolutional Neural Network in Brain Tumor Segmentation Pol J Med Phys Eng 2018;24(1):43-53 49 Executive summary · Over 250’000 people identified with primary brain tumor in the world which is about two percent of all the cancers, moreover, one quarter of deaths by cancers are caused by metastases to the brain. · BRATS as the major dataset used in the brain tumor segmentation studies, is a collection of multi-modality brain tumor MR images (T1, T2, T1C and Flair) with their ground truth (manual segmented by experts). · The detection of brain tumors is done usually by imaging. MRI is the most useful and common modality to show the tumors in the brain MRI scans. · The [...] Behrouz Alizadeh Savareh et al: Convolutional Neural Network in Brain Tumor Segmentation Pol J Med Phys Eng 2018;24(1):43-53 51  Withey D, Koles Z. A review of medical image segmentation: methods and available software. International Journal of Bioelectromagnetism. 2008;10(3):125-148.  Sachin N, et al. Brain Tumor Detection Based On Bilateral Symmetry Information. Int. Journal of Engineering Research and Application. 2013;3(6):430-432.  Constantin AA, Bajcsy BR, Nelson CS. Unsupervised segmentation of brain tissue in multivariate MRI. in Biomedical Imaging: From Nano to Macro, 2010 IEEE International Symposium on. 2010.  Kobashi S, et al. Adaptive Brain Tissue Classification with Fuzzy Spatial Modeling in 3T IR-FSPGR MR Images. in Automation Congress, 2006. WAC '06. World. 2006.  Yu CP, [...] CNNs can be used on raw multidimensional data without preprocessing operations. The Convolutional Neural Network is able to learn the deep general features of multidimensional data such as the image through two basic operations: convolution and sampling. Convolutional Neural Network (CNN) in brain tumor segmentation The CNN structural idea is derived from the multilayered perceptron (MLP) because of the use of layered structure [84-86]. Also, the CNN functional idea is based on time delayed neural networks, which uses sharing the intra-network weights in order to reduce the network computations . CNNs can be used on raw multi-dimensional data without preprocessing phase, with a variety of operations, such as convolution, sampling and rectified linear unit, it is able to extract a variety",0.56920683,
+https://pmc.ncbi.nlm.nih.gov/articles/PMC10453020/,Brain Tumor Detection Based on Deep Learning Approaches and ...,"The authors of this work  proposed several methods for exploiting MR images to spot brain tumors. The researchers looked into the effectiveness of using 3D CNNs, SVMs, and multi-class SVMs for segmentation improvement. In a variety of medical image processing tasks, including brain tumor detection, deep learning approaches, and CNNs in particular, showed outstanding efficacy. When compared to other machine learning classifiers, the results from using deep learning approaches to classify and segment brain tumors were superior. [...] In the context of medical imaging, image preprocessing techniques are utilized to generate an accurate representation of the anatomical structure of the human body, as discussed in . Specifically, in the case of MRI images, they are employed to identify and locate tumor cells within the affected human brain. In another paper , the authors presented a unique method that used multimodal information fusion in tandem with CNNs to spot brain cancers in 3D MRI scans. The method improved upon multimodal 3D-CNNs in order to capture the unique features of brain tumor lesions using many imaging modalities. Additionally, in , the researchers investigated the use of VGGNets, GoogleNets, and ResNets, among other CNN designs, in the context of brain tumor classification. According to the findings, [...] CNN algorithms based on deep learning. Various optimizers, including Adam, RMSprop, and stochastic gradient descent (SGD), were used to complete the objectives. As the research showed, when AlexNet was properly calibrated, it excelled at medical imaging tasks. To classify 253 brain tumor images (155 tumors and 98 non-tumors), Grampurohit and Shalavadi  built a unique CNN architecture and used VGGNet. Overfitting was mitigated by employing data augmentation and preprocessing strategies to boost sample diversity. Overall, the validation accuracy for the bespoke CNN model was 86%, whereas it was 97% for VGGNet on one dataset.",0.5660431,
+https://iris.polito.it/retrieve/57467dad-8b32-4ddf-a36c-6406a5566cb7/Brain%2BTumour%2BDetection%2BV25%2B-%2BR1_V6_R2_V4.pdf,[PDF] Brain tumor detection and screening using artificial intelligence ...,"& Hamed, H. F. (2019). A review on brain tumor diagnosis from MRI images: Practical implications, key achievements, and lessons learned. Magnetic resonance imaging, 61, 300-318. 6. Öman, O., Mäkelä, T., Salli, E., Savolainen, S., & Kangasniemi, M. (2019). 3D convolutional neural networks applied to CT angiography in the detection of acute ischemic stroke. European radiology experimental, 3, 1-11. 7. Bondy, M. L., Scheurer, M. E., Malmer, B., Barnholtz‐Sloan, J. S., Davis, F. G., Il'Yasova, D., ... & Brain Tumor Epidemiology Consortium. (2008). Brain tumor epidemiology: consensus from the Brain Tumor Epidemiology Consortium. Cancer, 113(S7), 1953-1968. 8. Tomaszewski, W., Sanchez-Perez, L., Gajewski, T. F., & Sampson, J. H. (2019). Brain tumor microenvironment and host state: implications [...] J., Sharif, M., Raza, M., Saba, T., Sial, R., & Shad, S. A. (2020). Brain tumor detection: a long short-term memory (LSTM)-based learning model. Neural Computing and Applications, 32, 15965-15973. 14. Abd-Ellah, M. K., Awad, A. I., Khalaf, A. A., & Hamed, H. F. (2019). A review on brain tumor diagnosis from MRI images: Practical implications, key achievements, and lessons learned. Magnetic resonance imaging, 61, 300-318. 15. Moher, D., Liberati, A., Tetzlaff, J., Altman, D. G., & PRISMA Group, T. (2009). Preferred reporting items for systematic reviews and meta-analyses: the PRISMA statement. Annals of internal medicine, 151(4), 264-269. 16. Akinyelu, A. A., Zaccagna, F., Grist, J. T., Castelli, M., & Rundo, L. (2022). Brain Tumor Diagnosis Using Machine Learning, Convolutional Neural [...] background images. Deformable models are another method for contracting and expanding different shapes in an image over time and also confirming specific image features. However, this method may present problems in noisy images with unclear boundaries. There may be shapes with topologies that are inconsistent with those of the object being studied due to this. There is also the possibility of segmentation using level sets. This technique is widely used in medical imaging, as it can handle a wide range of parameters and scenarios, including cavities, concavities, convolutions, splitting, and merging. 35 7.2.Machine Learning based techniques ML is one of the most fundamental methods used to develop systems for the automated detection of brain tumors. In addition, machine learning is used",0.609455,
+https://ar5iv.labs.arxiv.org/html/1911.01898,[1911.01898] 3D Deformable Convolutions for MRI classification,"The whole process for deformable convolution looks as follows. Suppose, is a sampling grid for the regular convolution. For each location on the input feature map and location in the sampling grid, an additional convolutional layer, typically with kernel of the same size and dilation, predicts an offset . Then the sampling grid for deformable convolution is augmented with predicted offsets, and kernel is applied to the values at locations , which are computed via bilinear interpolation, since the obtained locations can be fractional. The final value, computed by deformable convolution at a point is , where are weights of the convolution kernel, instead of in the case of standard one. [...] Insertion of deformable convolution layers in VoxResNet architecture yield statistically significant improvement in classification accuracy for imagery without preprocessing and skull-stripping of images. However, they do not improve classification performance on preprocessed data. This can be possibly explained by the fact that MNI normalization significantly reduces variability in small deformations of the brain image and deformable convolutions lack information for training the meaningful offset. But at the same time the number of trainable parameters increases, making the model with deformable convolutions less stable to overfitting. [...] Thus, convolutional networks can be applied directly to the raw neuroimaging data without loss of model performance and over-fitting, which allows skipping the feature extraction step.
+
+However, there is a problem: the traditional convolutional networks are very sensitive to image size, scale and spatial orientation thus require thorough pre-processing specific to a clinical application. Because different locations in the input feature maps may correspond to objects with different scales or deformation, adaptive determination of scales or receptive field sizes is desirable for certain tasks, particularly in neuroimaging.",0.4501424,
+https://dl.acm.org/doi/10.1145/3664647.3680828,A Fast and Robust Convolutional Neural Network for 3D Deformable ...,"Deformable image registration (DIR) is crucial for many medical image applications. In recent years, learning-based methods utilizing the convolutional",0.44840267,
+https://www.mdpi.com/2313-433X/10/12/296,Evaluating Brain Tumor Detection with Deep Learning ... - MDPI,"In this study, we investigate and benchmark six commonly used MRI sequences in conjunction with four deep learning convolutional neural networks",0.42233846,
+https://www.sciencedirect.com/science/article/pii/S2472630325000925,BrainCNN: Automated brain tumor grading from magnetic ...,"and 99.49 % for high-grade tumors, surpassing traditional methods. These results not only enhance the accuracy of brain tumor grading but also improve computational efficiency by reducing processing time and the number of iterations required. [...] ## Keywords
+
+Brain tumor grading
+
+Convolutional neural network
+
+MRI
+
+## Cited by (0)
+
+© 2025 The Authors. Published by Elsevier Inc. on behalf of Society for Laboratory Automation and Screening. [...] conducted using various methods: (1) raw MRI slices, (2) MRI segments containing only the tumor area, (3) feature-extracted slices derived from the original images through the proposed CNN architecture, and (4) feature-extracted slices from tumor area-only segmented images using the proposed CNN. The MRI slices and the features extracted from them were labeled using machine learning models, including Support Vector Machine (SVM) and CNN architectures based on transfer learning, such as MobileNet, Inception V3, and ResNet-50. Additionally, a custom model was specifically developed for this research. The proposed model achieved an impressive peak accuracy of 99.45 %, with classification accuracies of 99.56 % for low-grade tumors and 99.49 % for high-grade tumors, surpassing traditional",0.40627348,
+https://pmc.ncbi.nlm.nih.gov/articles/PMC11110381/,Deformable registration of magnetic resonance images using ... - NIH,"Considering the above points, establishing spatial correspondences between MRI scans acquired at two time-point (e.g., pre- and post-operation) from glioma patients can further help in the understanding of the mechanisms of these tumors. Precisely, for potential tumor recurrence and tumor infiltration, it can further contribute to developing predictive modeling for related pathophysiological processes. It can also aid in understanding the biophysical dynamic and plasticity characteristic of brain tissues besides neurosurgical planning. Few studies have addressed this correspondence utilizing different convolutional neural networks (CNNs) for deformable registration. These methods include proposing a one-stage [15–19], two-stage  or three-stage  registration pipeline for this purpose. [...] ## Acknowledgements
+
+The authors express their gratitude to Princess Nourah bint Abdulrahman University Researchers Supporting Project (Grant No. PNURSP2024R10), Princess Nourah bint Abdulrahman University, Riyadh, Saudi Arabia.
+
+## Abbreviations
+
+dimensional
+
+Advanced normalization tools
+
+Brain Tumor Sequence Registration 2022 challenge
+
+Convolutional neural networks
+
+Convolutional U-Net-based deformable image registration
+
+Magnetic resonance imaging
+
+Normalized cross-correlation
+
+Structural similarity index
+
+T1-weighted
+
+T1-weighted with contrast enhancement
+
+T2-weighted
+
+T2-weighted Fluid Attenuated Inversion Recovery
+
+VoxelMorph1
+
+VoxelMorph2
+
+## Author contributions [...] kernel size and 1 × 1 × 1 stride). The decoder network is made up of four upsampling convolutional layers (3 × 3 × 3 kernel size and 1 × 1 × 1 stride) and the LeakyReLU activation function to reconstruct the deformation field. The encoder and decoder networks are concatenated via skip connections to detect and combine information at different spatial levels to produce the deformation field. Three additional convolutional layers (3 × 3 × 3 kernel size and 1 × 1 × 1 stride) with LeakyReLU activation function are added after the decoder network. The final layer is a convolutional layer (3 × 3 × 3 kernel size and 1 × 1 × 1 stride) with a linear activation used for a regression output. The linear activation in this layer enables positive and negative values as the output of the deformation",0.3864398,
+https://www.scribd.com/document/723277229/abiwinanda2018,CNN for Brain Tumor Classification | PDF | Artificial Neural Network,"Scribd
+
+# CNN for Brain Tumor Classification
+
+CNN for Brain Tumor Classification
+
+## Uploaded by
+
+AI-enhanced title
+
+# CNN for Brain Tumor Classification
+
+# CNN for Brain Tumor Classification
+
+CNN for Brain Tumor Classification
+
+## Uploaded by
+
+AI-enhanced title
+
+## Share this document
+
+## Footer menu
+
+About
+
+Support
+
+Legal
+
+Social
+
+Get our free apps
+
+Scribd - Download on the App Store
+Scribd - Get it on Google Play
+
+About
+
+Legal
+
+Support
+
+Social
+
+Get our free apps
+
+Scribd - Download on the App Store
+Scribd - Get it on Google Play",0.38415,
+https://www.jpier.org/ac_api/download.php?id=24061204,[PDF] YOLOv8-DEC: Enhancing Brain Tumor Object Detection Accuracy in ...,"In this work, we offer a sophisticated YOLOv8-based brain tumor detection model that has been improved by inte- grating three critical",0.42591617,
+https://www.sciencedirect.com/org/science/article/pii/S1546221823002072,Effectiveness of Deep Learning Models for Brain Tumor ...,"Brain tumor
+
+deep learning
+
+ensemble
+
+detection
+
+healthcare
+
+## Cited by (0)
+
+© 2023 Irfan et al. [...] A brain tumor is a mass or growth of abnormal cells in the brain. In children and adults, brain tumor is considered one of the leading causes of death. There are several types of brain tumors, including benign (non-cancerous) and malignant (cancerous) tumors. Diagnosing brain tumors as early as possible is essential, as this can improve the chances of successful treatment and survival. Considering this problem, we bring forth a hybrid intelligent deep learning technique that uses several pre-trained models (Resnet50, Vgg16, Vgg19, U-Net) and their integration for computer-aided detection and localization systems in brain tumors. These pre-trained and integrated deep learning models have been used on the publicly available dataset from The Cancer Genome Atlas. The dataset consists of 120 [...] Skip to article
+
+My account
+
+Sign in
+
+## Computers, Materials and Continua
+
+Volume 76, Issue 1, 9 June 2023, Pages 711-729
+
+# Article Effectiveness of Deep Learning Models for Brain Tumor Classification and Segmentation
+
+Author links open overlay panel, , , , , , , ,
+
+Under a Creative Commons license
+
+Open access",0.23903875,
+https://www.iieta.org/download/file/fid/135277,[PDF] Leveraging Medical Imaging Data for Enhanced Brain Tumor ... - IIETA,Novel deep learning architectures can be designed for brain tumor detection. This can involve exploring advanced architectures like 3D,0.69820654,

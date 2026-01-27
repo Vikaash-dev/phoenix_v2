@@ -1,0 +1,8 @@
+{
+  "Title": "NeuroSnake-KAN: Interpretable Nonlinear Classification for Brain Tumor Detection",
+  "Hypothesis": "We hypothesize that replacing the dense classification head of the NeuroSnake-Spectral architecture with a Kolmogorov-Arnold Network (KAN) layer will improve classification accuracy and interpretability by learning optimal spline-based activation functions for complex tumor pathology features.",
+  "Experiment_Plan": "1. Implement a `KANLinear` layer in TensorFlow/Keras using B-splines. 2. Modify `NeuroSnakeSpectralModel` to replace the final MLP head with a KAN head. 3. Compare `NeuroSnake-Spectral` (Baseline) vs `NeuroSnake-KAN` (Ours) on simulated Br35H data. 4. Analyze parameter efficiency and visualize learned activation functions.",
+  "Novelty_Score": 9,
+  "Feasibility_Score": 8,
+  "Selected_Reason": "KANs are a very recent (2024) breakthrough offering 'Pareto-optimal' trade-offs between accuracy and parameter count. Integrating them with the geometric adaptivity of Snake Convolutions and the global context of Spectral Gating creates a 'Triple-Threat' architecture (Geometry + Frequency + Nonlinearity) that is highly novel in the medical domain."
+}

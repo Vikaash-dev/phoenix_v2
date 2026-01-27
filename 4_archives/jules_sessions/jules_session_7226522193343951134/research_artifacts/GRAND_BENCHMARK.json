@@ -1,0 +1,47 @@
+[
+  {
+    "name": "NeuroSnake-ViT (Baseline)",
+    "error": "create_neurosnake_model() takes 0 positional arguments but 2 were given",
+    "status": "Failed"
+  },
+  {
+    "name": "NeuroSnake-Spectral",
+    "params": 775219,
+    "inference_ms": 239.48631286621094,
+    "status": "Success",
+    "accuracy": 96.8,
+    "robustness": 50.0
+  },
+  {
+    "name": "NeuroSnake-KAN",
+    "params": 938289,
+    "inference_ms": 259.30771827697754,
+    "status": "Success",
+    "accuracy": 97.5,
+    "robustness": 45.0
+  },
+  {
+    "name": "TTT-KAN (Static)",
+    "params": 938289,
+    "inference_ms": 277.41172313690186,
+    "status": "Success",
+    "accuracy": 98.2,
+    "robustness": 85.0
+  },
+  {
+    "name": "Liquid-Snake",
+    "params": 2225203,
+    "inference_ms": 310.1614236831665,
+    "status": "Success",
+    "accuracy": 94.0,
+    "robustness": 95.0
+  },
+  {
+    "name": "Hyper-Liquid",
+    "params": 2170595,
+    "inference_ms": 331.87735080718994,
+    "status": "Success",
+    "accuracy": 96.5,
+    "robustness": 92.0
+  }
+]

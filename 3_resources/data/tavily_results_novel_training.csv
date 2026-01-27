@@ -1,0 +1,218 @@
+url,title,content,score,raw_content
+https://arxiv.org/html/2510.08617v1,Reproducible Evaluation of Data Augmentation and Loss Functions ...,"This study presents a reproducible evaluation of U-Net performance on brain tumor MRI with focal loss and basic data augmentation strategies. Focal loss is commonly applied to address class imbalance by increasing the weight of hard-to-classify regions, such as tumor boundaries. We systematically evaluated the effect of focal loss parameters alongside three augmentation techniques — horizontal flip, rotation, and scaling — to assess their impact on segmentation accuracy and generalization.
+
+The major contributions of this work are given below:
+
+ •
+
+  A baseline implementation of U-Net with focal loss for brain tumor MRI segmentation
+ •
+
+  Analysis of the impact of varying focal loss parameters on model performance
+ • [...] to guide future research on augmentation strategies and loss function design in brain tumor segmentation. [...] Brain tumor segmentation is crucial for diagnosis and treatment planning, yet challenges such as class imbalance and limited model generalization continue to hinder progress. This work presents a reproducible evaluation of U-Net segmentation performance on brain tumor MRI using focal loss and basic data augmentation strategies. Experiments were conducted on a publicly available MRI dataset, focusing on focal loss parameter tuning and assessing the impact of three data augmentation techniques: horizontal flip, rotation, and scaling. The U-Net with focal loss achieved a precision of 90%, comparable to state-of-the-art results. By making all code and results publicly available, this study establishes a transparent, reproducible baseline to guide future research on augmentation strategies and",0.99998176,
+https://www.frontiersin.org/journals/physiology/articles/10.3389/fphys.2024.1342572/full,A novel approach to brain tumor detection using K-Means ... - Frontiers,"• The image dataset is subjected to synthetic data augmentation methods, that boosts the volume of training data and enhance the effectiveness of the deep learning model without overfitting.
+
+• The findings reveal that the suggested approach performs better than current approaches in terms of sensitivity and accuracy, highlighting its potential for enhancing brain tumor detection and identification. [...] Consequently, the dataset size was expanded from 802 to 1,604 images, providing a more comprehensive training set. As illustrated in Figure 3, the augmented images demonstrate the effectiveness of these transformations in creating a robust training dataset. This approach is supported by studies like those by Shorten and Khoshgoftaar (2019), which highlight the significant improvements in deep learning model performance and generalization through data augmentation techniques. [...] Synthetic data augmentation is employed to generate additional modifications of segmented MRI images, such as rotations, translations, and alterations in brightness and contrast, to enhance diversity and robustness of the training dataset. These random transformations help the model generalize better, reducing the risk of overfitting and improving its performance. Specifically, fundamental augmentation techniques such as rotation, shifting, shearing, zooming, flipping, and fill mode, which manages how vacant pixels are filled after transformations, were used. This process is crucial in medical imaging, where tumors can appear in various forms and orientations, and adjusting brightness and contrast mimics the variability in MRI scans. Consequently, the dataset size was expanded from 802 to",0.99996495,
+https://drpress.org/ojs/index.php/HSET/article/download/6204/6004,[PDF] Study on Data Augmentation Method for Brain Tumour Detection,"dataset to train the model to get accuracy and loss. Data augmentation means building algorithms through the introduction of unseen data . This study includes three data augmentation method, which will be explained separately. The first method used in this article is named normal augmentation. It is a simple way in python to achieve data augmentation. The normal augmentation in this article uses rotation, flip, scale, and translation to create new datasets. Shorten says that shifting images left, right, up, and down is a very efficient way to prevent positional bias . The second method used in this study is called mixup. Mixup method refer to select two samples randomly and create the new one. Liang says mixup method has a better ability of generalization than normal data augmentation [...] are showed up. In figure 1, the trend of both accuracy and validation accuracy is increasing. The train accuracy starts from about 0.64 and the validation accuracy starts from about 0.76. After 30 epochs training, the train accuracy comes to 0.9942 and the validation accuracy comes to 0.9583. In figure 2, it is showed that both train loss and validation loss is decreasing when epochs are increasing. At the end of training, train loss reaches to 0.0168 and the validation loss reaches to 0.1585. Figure 3. Accuracy for training and validation of model trained by mixup augmented data. Highlights in Science, Engineering and Technology MISBP 2022 Volume 36 (2023) 1213 Figure 4. Loss for training and validation of model trained by mixup augmented data. According to the figures above (Figure [...] CNN is employed in many fields because of its powerful image classification function. In medical field, CNN is employed to detect brain tumors. The reason is that manual detections receive low accuracy. This article discusses how different data augmentation method will influence the accuracy of the CNN model when classifying brain tumors. Data augmentation will improve the model’s performance and generalization when the dataset to train the model is small. In this study, three different methods of data augmentation are employed to augment the dataset (normal augmentation, cutout augmentation and mixup augmentation.) Among all those methods, models trained by cutout and mixup perform better than the model trained by original dataset, while models with normal augmentation has lower accuracy",0.9999465,
+https://pmc.ncbi.nlm.nih.gov/articles/PMC11894048/,A novel approach for the detection of brain tumor and its ... - NIH,"data sets. It also helps in the classification of brain tumors. [...] model consists of a deep neural network and an image processing framework. It is divided into various phases, such as the mapping stage, the data augmentation stage, and the tumor discovery stage. The data augmentation stage involves training a CNN to identify the regions of the image that are overlapping with the tumor space marker. The DCNN’s predicted performance is compared with the test result. The third stage is focused on training a deep neural system and a SVM. This model was able to achieve a 99% accuracy rate and a sensitivity of 0.973%. It is primarily utilized for identifying brain tumors. [...] the training model’s accuracy was increasing, which means that it could be used to identify brain tumor.",0.9998118,
+https://link.springer.com/article/10.1007/s11042-022-12362-9,A novel framework for brain tumor detection based on convolutional ...,"probability distribution of the data and has weights and biases 𝜃. The decoder is denoted by P𝜃(x|z). The loss function is the negative log-likelihood function defined as follows, [...] Our proposed framework with two networks: the generator network and the classifier. The preprocessed images are used to train the generator network described in Section 3.3. Figure 4 shows a sample of generated images using the generative network. In the start of training the generative network, the network was not able to generate clear brain MRI images. With increasing the training time (i.e.number of training iterations), the network generates clearer images that eventually reflect the typical pattern of the brain MRI images. We used the generator network to convert the original small training dataset to a larger one with 1000 samples (500 for each class). The newly generated large dataset is then used for training the classifier network for detection. The classifier network is [...] #### 4.2.2 Transfer learning
+
+A pre-trained modified VGG network followed by a dense layer with 256 neurons and the output layer with two neurons is trained using the small training dataset (after pre-processing). RMSprop is used as an optimizer with a learning rate of 0.0004. The loss function is categorical cross-entropy. The dropout rate is chosen to be 0.5.
+
+#### 4.2.3 Proposed framework",0.9997918,
+https://pmc.ncbi.nlm.nih.gov/articles/PMC10453020/,Brain Tumor Detection Based on Deep Learning Approaches and ...,"In order to identify brain tumors, we used a dataset consisting of 10,288 images. Data augmentation techniques were applied just to this fraction in order to enlarge the training set. As shown in Table 2, this brought the total number of pictures available for the task of identifying brain tumors from MRI scans to 51,448 images.
+
+#### Table 2.
+
+Data augmentation on the brain tumor dataset. [...] For the overall loss to be minimized and the accuracy to be maximized, an optimizer that makes adjustments to the neural network’s biases and learning rate is essential. When it comes to training the model, the optimizer picked matters a lot. For this analysis, we turned to the binary cross-entropy loss function and the Adam optimizer. [...] synthetic data samples or modifies the existing data slightly. Data augmentation is becoming increasingly popular in several research areas, including signals, computer vision, speech processing, and natural language processing [66,67]. It is possible to intentionally increase the size of a dataset by employing methods like data rotation, scaling, and noise addition. Pictures can be enlarged by zooming in, flipped horizontally or vertically by certain degrees, and have their brightness altered up or down, just to name a few of the alterations that can be made. Data augmentation uses these techniques to effectively increase the training data’s dimensionality, leading to better ML and DL model performance and resilience.",0.9997695,
+https://www.nature.com/articles/s41598-025-14901-4,Enhanced MRI brain tumor detection using deep learning in ... - Nature,"Further, several advanced data augmentation techniques were utilized to enhance the diversity of the benchmark training dataset and strengthen the model’s ability to generalize to novel data. Data augmentation is a technique that artificially increases the quality such as illumination, size, and orientation as well as the diversity of a dataset by applying various transformations. This research utilized random modifications to brightness and contrast. Brightness was arbitrarily adjusted within a range of 0.8 to 1.2, emulating diverse lighting situations that may arise during image acquisition. Likewise, the contrast was modified within the identical range to assist the model in identifying tumor characteristics across varying imaging settings. Subsequently, all enhanced images were [...] stratified cross-validation test was adopted to ensure fair evaluation and address class imbalance. In five-fold cross validation test, data was split into five folds such that each fold preserved the same class distribution as the overall dataset. This method ensures that every tumor subtypes, including minority classes are proportionally represented in each training and validation test, this technique enhances the reliability of performance metrics. [...] of training; however, it may not achieve the same level of proficiency as CNN in processing highly complex image data. However, the dependence on extracted features indicates that performance may be suboptimal when encountering unseen or complex variations in medical images.",0.9997508,
+https://pmc.ncbi.nlm.nih.gov/articles/PMC12699001/,Hybrid Deep Learning for Brain Tumor Detection - PubMed Central,"Data augmentation aids in the artificial expansion of the training dataset in the context of brain tumor detection, enhancing the model’s capacity for generalization and performance on unknown data. The images in this dataset are divided into 2 categories: Yes (tumor-containing images) and No (tumor-free images). There were originally 251 photos in the Yes category and only 21 in the No category. As shown in Table 2, the number of photos in the Yes category rises to 1506 and in the No category to 126 following the use of data augmentation.
+
+#### Table 2.
+
+Dataset Before and After Augmentation.
+
+| Dataset brain tumor | Original images | Augmented images |
+| Yes | 251 | 1506 |
+| No | 21 | 126 |
+| Total | 272 | 1632 |
+
+Open in a new tab
+
+### Methods of Data Augmentation [...] ### Data Enrichment for Brain Tumor Identification
+
+In deep learning, data augmentation is an essential strategy, especially in fields like medical imaging, where gathering diverse and huge datasets can be difficult. Before applying the augmentation, images have been enhanced using noise removal and contrast enhancement, and the enhanced image is shown in Figure 1. [...] The Data Augmentation was only used on both classes, especially on the minority (non-tumor) class, by using geometric transformations like random rotation, flipping, zooming, and contrast change, contributing to higher intra-class variability. Non-tumor images were generated as synthetic using repeated applications and controlled transformations to generate more samples of images retaining the image’s properties. This action had enlarged the representation of the minority class, but not through unrealistic artifacts. To further balance the training dataset, oversampling was applied, effectively decreasing the odds of being imbalanced by copying non-tumor samples until an almost similar representation of both classes in the training set.",0.9997305,
+https://pubsonline.informs.org/do/10.1287/orms.2023.04.03/full/,Revolutionizing Brain Tumor Detection: The CNN-Based Medical ...,"## Performance Evaluation
+
+We rigorously evaluated our CNN-based brain tumor detection model using a 90-10 training-testing split ratio on a diverse and representative data set. The model was trained with the AdaMax algorithmic optimizer and categorical cross-entropy loss function, achieving a remarkable training loss of 0.0018. This demonstrates the model’s efficient pattern learning and strong convergence during training. We assessed the model’s performance on a separate testing data set to ensure robustness, verifying its generalization capabilities. Combining a well-curated data set, efficient optimizer and appropriate loss function has resulted in a promising brain tumor detection model with potential applications in real-world medical scenarios. [...] 4. Batch normalization: Batch normalization is a powerful technique in deep learning that enhances training by normalizing the activation functions of each layer. It mitigates the internal covariate shift problem, improving convergence and optimization. Batch normalization enables higher learning rates, leading to faster training and better performance. It acts as a regularizer, preventing overfitting, and reduces the need for manual hyperparameter tuning. This technique is a standard component in modern deep learning architectures, contributing to the success of training deep neural networks on complex tasks. [...] 1. Data preprocessing: Before model building, medical images undergo preprocessing, including image resizing, normalization and data augmentation. Image resizing ensures uniform size, simplifying computational requirements and enabling efficient data processing. Normalization scales pixel values to a standardized range (typically 0 to 1), reducing the impact of intensity variations. Data augmentation expands the training data set using transformations such as rotations, flips and brightness adjustments, improving the model’s generalization and robustness to varying conditions.",0.99963164,
+https://www.frontiersin.org/journals/oncology/articles/10.3389/fonc.2025.1508326/full,A deep learning approach for brain tumour classification ... - Frontiers,"To further boost model performance on the training images, various data augmentation practices such as rotation, scaling, and flipping were implemented. These augmentations emulate changes found in real data, improving the model’s performance on data that it has not previously encountered. Additionally, all images were set to a uniform input size of 608 × 608 pixels. This standardization improves consistency and ensures the preservation of essential details required for precise tumor detection.
+
+Customized anchor boxes, generated through k-means clustering on the training data, facilitated the accurate localization of bounding boxes. The IoU threshold of 0.5 was employed to establish valid detections, effectively balancing sensitivity and specificity in tumor detection. [...] We used YOLOv7’s default ComputeLoss function, which combines CIoU loss for bounding box accuracy, objectness loss to detect tumor presence, and classification loss for tumor type. These help to improve detection and classification performance. Although ComputeLossOTA and other advanced loss functions were not used, they have potential for handling low-quality or imbalanced data better.
+
+### 3.6 Hyperparameter tuning and optimization of YOLOv7 model [...] Skewed performance metrics: High overall accuracy may be misleading if the model fails to correctly predict the minority class.
+
+#### 3.2.4 Addressing the data imbalance
+
+To address the class imbalance, the following techniques were considered.
+
+Data augmentation: Geometric and photometric transformations (such as rotations, flips, zoom, and brightness adjustments) were applied to increase the effective size of the minority class.
+
+Class weighting: Class weights were set during the model training phase and were set inversely to the frequency of the class to increase the penalty for the wrong classification of minority classes.",0.99948466,
+https://pmc.ncbi.nlm.nih.gov/articles/PMC8143310/,A Novel Deep Learning Method for Recognition and Classification of ...,"precise localization and segmentation, and it is well suited for the segmentation of medical imaging . Don et al.  adopted a U-net CNN architecture for the segmentation of a tumor with some minor modifications. They used the technique of data augmentation with dice-based loss function to improve segmentation accuracy. [...] In this paper, we proposed an automated approach for brain tumor detection and segmentation using MRI images. The proposed technique adopts a DL model using a fully convolution neural network, Mask-RCNN  with DenseNet-41 backbone, and utilizes a multitask loss function to achieve an end-to-end training of deep CNN, increasing the detection accuracy. The motivation behind using a custom Mask-RCNN was to achieve a similar level of accuracy with a comparatively simple model, fewer kernels, and two convolutional layers. To show the efficiency of the proposed approach, we evaluated our model on free and online available brain tumor datasets [38,39] using various quantitative measures. The results of brain tumor MRI segmentation are validated through ground truth analysis. The recent works have [...] The brain tumor detection approaches can be divided into two types, named machine learning (ML)-based  and deep learning (DL)-based  methods. ML-based techniques mainly include support vector machine , conditional random forest , decision tree , principal component analysis , and fuzzy c-means . These techniques require hand-crafted features. The hand-crafted features, here, mean that the features are required to be extracted from training images to start the learning process and perhaps require an expert with extensive knowledge to identify the most important features. Hence, the detection accuracy of the ML-based techniques is dependent on the quality and representation of the extracted features, thus is limited and prone to errors in dealing with large datasets . Meanwhile, DL-based",0.9992848,
+https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0334430,Advanced deep learning-based brain tumor classification using a ...,"The left plot in Fig 10 represents the training and validation loss over 35 epochs. Initially, both training and validation losses were high during the early epochs. As the training progress was increased, the model learned effectively without overfitting. Furthermore, the right plot in Fig 10 presents the training and validation accuracy. The training accuracy improved and reached 99.05%, while the validation accuracy reached 96.33%. This demonstrates that the model performed well on unseen data. Further, the left plot in Fig 11 represents the training and validation loss of the optimized ResNet101. Initially, both losses were extremely high during the early epochs, but they rapidly declined and stabilized at near-zero values. This significant drop indicates that the model learned [...] labels into a binary matrix format, this transformation is crucial for the multi-class classification’s categorical cross-entropy loss function. [...] The parameters chosen for training the modified CNN model are presented in Table 2. There are various optimizers used to train deep learning models; among them, the Adam optimizer was used with the default learning rate. To dynamically adjust the learning rate during training, the ReduceLROnPlateau callback was employed. This callback monitors validation accuracy and, after a predetermined number of epochs, decreases the learning rate by a factor of 0.1 if no improvement is seen. The model was trained for 35 epochs, as illustrated in Fig 2. To further evaluate the generalization performance of the novel customized CNN, a 5-fold cross-validation was employed to the 88% of the dataset allocated for training and validation. Table 3 presents the fold-wise training and validation accuracies.",0.99818975,
+https://www.mdpi.com/2673-4591/82/1/101,A Novel Deep Learning Technique for Brain Tumor Detection ... - MDPI,"To solve the issue, this study suggests using a lightweight deep parallel convolutional neural network (PCNN) with a two-pathway CNN to extract known micro and",0.99608517,
+https://arxiv.org/html/2512.06531v1,Novel Deep Learning Architectures for Classification and ... - arXiv,"accuracy. Bouhafra and El Bahi reviewed deep learning approaches for brain tumor detection and classification, emphasizing the role of transfer learning, autoencoders, and attention mechanisms. Their analysis provides valuable insights into the advancements and limitations of current methodologies. Rao and Karunakara presented a comprehensive review on MRI-based brain tumor segmentation, discussing semi-automatic techniques and the latest trends in deep learning methods. Their work highlights the ongoing evolution of segmentation techniques and the need for continuous improvement. Verma et al. conducted a comparative study of brain tumor segmentation methods, categorizing them into conventional, machine learning-based, and deep learning-based approaches. Their findings indicate that deep [...] Although the accuracy of our proposed model is quite high still there is a lot of future scope for this study, they include making the model more generalized for working more accurately in real-time classification. This can be achieved by training the network in Big data with a machine with high computational resources to train it effectively. Also, in the future, we have planned to integrate this model in a Mobile application, where doctors and patients can be the users and detect the brain tumor and classify it with their proper location thus helping in the treatment. If they want they can also use their own data to train the model and fine-tune it based on their specific MRI machine to get better results of classification.
+
+## 7 Data Availablity [...] tumor boundaries within the brain. SAS-Net employs similar self-attentive techniques to SAETCN, ensuring a consistent and high-quality extraction of spatial features necessary for accurate tumor segmentation. Together, these models form a unified framework that not only enhances the classification and segmentation tasks individually but also paves the way for integrated approaches that can significantly improve the overall accuracy and reliability of brain tumor diagnosis.",0.9951703,
+https://arxiv.org/abs/2510.08617,Reproducible Evaluation of Data Augmentation and Loss Functions ...,"baseline to guide future research on augmentation strategies and loss function design in brain tumor segmentation. [...] > Abstract:Brain tumor segmentation is crucial for diagnosis and treatment planning, yet challenges such as class imbalance and limited model generalization continue to hinder progress. This work presents a reproducible evaluation of U-Net segmentation performance on brain tumor MRI using focal loss and basic data augmentation strategies. Experiments were conducted on a publicly available MRI dataset, focusing on focal loss parameter tuning and assessing the impact of three data augmentation techniques: horizontal flip, rotation, and scaling. The U-Net with focal loss achieved a precision of 90%, comparable to state-of-the-art results. By making all code and results publicly available, this study establishes a transparent, reproducible baseline to guide future research on augmentation [...] |  |  |
+ --- |
+| Comments: | Code and results available at this https URL |
+| Subjects: | Computer Vision and Pattern Recognition (cs.CV); Machine Learning (cs.LG) |
+| Cite as: | arXiv:2510.08617 [cs.CV] |
+|  | (or  arXiv:2510.08617v1 [cs.CV] for this version) |
+|  |  arXiv-issued DOI via DataCite |
+
+## Submission history
+
+From: Saumya B [view email]   
+ [v1] Wed, 8 Oct 2025 06:15:28 UTC (486 KB)
+
+Full-text links:
+
+## Access Paper:
+
+View a PDF of the paper titled Reproducible Evaluation of Data Augmentation and Loss Functions for Brain Tumor Segmentation, by Saumya B
+
+ View PDF
+ HTML (experimental)
+ TeX Source
+
+view license
+
+Current browse context:
+
+cs.CV
+
+< prev"")    |    next >"")
+
+new  |  recent  | 2025-10
+
+Change to browse by:
+
+cs  
+ cs.LG
+
+### References & Citations",0.9999286,
+https://www.sciencedirect.com/science/article/abs/pii/S0010482525005931,Real-time brain tumour diagnoses using a novel lightweight deep ...,"The rest of the study is systematized as follows: A comprehensive overview of the literature, the coverage of this study, and the study needs are presented in Section 2. The deep learning research approach based on brain tumour detection and classification is presented in Section 3. Data collection, pre-processing, machine-learning methodologies, and performance analysis techniques are covered in this part. Section 4 gives the numerical findings and examines the performance of the studied machine-learning algorithms. Section 5 highlights future work and compares the performance of the suggested machine-learning structure with state-of-the-art impacts from the publications. As the last section, Section 6 summarizes the main conclusions and takeaways.
+
+## Access through your organization [...] 2025, 3rd IEEE International Conference on Networks Multimedia and Information Technology Nmitcon 2025
+
+View full text
+
+© 2025 Elsevier Ltd. All rights are reserved, including those for text and data mining, AI training, and similar technologies. [...] ## Access through your organization
+
+Check access to the full text by signing in through your organization.
+
+Access through your organization
+
+## Section snippets
+
+## Literature review
+
+Though early brain tumour identification is complex, deep learning algorithms have advanced to the point where they can now reliably identify brain cancers from digital pictures. Standard techniques for identifying brain tumours include MRIs, CT scans, and EEGs. Brain tumour detection accuracy has increased when deep learning models are used with MRI and CT images. Researchers have been thoroughly investigating machine-learning algorithms built on Recurrent Neural Networks (RNNs) , CNNs 
+
+## The proposed method",0.98951083,
+https://www.sciencedirect.com/science/article/pii/S277244252400042X,A systematic review of deep learning data augmentation in medical ...,"in deep learning-based data augmentation. This study explores the diverse applications of data augmentation in medical imaging and analyzes recent research in these areas to address this gap. The study also explores popular datasets and evaluation metrics to improve understanding. Subsequently, the study provides a short discussion of conventional data augmentation techniques along with a detailed discussion on applying deep learning algorithms in data augmentation. The study further analyzes the results and experimental details from recent state-of-the-art research to understand the advancements and progress of deep learning-based data augmentation in medical imaging. Finally, the study discusses various challenges and proposes future research directions to address these concerns. This [...] Explore deep learning-based data augmentation challenges in medical imaging and future research directions.
+ •
+
+  Discuss integrating multimodal data to improve the comprehensiveness of medical imaging analysis.
+
+## Abstract [...] ## Keywords
+
+Deep learning
+
+Data augmentation
+
+Image transformation
+
+Medical imaging augmentation
+
+Data synthesis
+
+Systematic review
+
+## Data availability
+
+No data was used for the research described in the article.
+
+## Cited by (0)
+
+© 2024 The Author(s). Published by Elsevier Inc.",0.97134733,
+https://www.worldscientific.com/doi/full/10.1142/S0219519423400882?srsltid=AfmBOop3adAqycdv6M66mocdIijaMsnmp-_ZXL96_zfrkGltI4yyFNNL,A NOVEL DEEP LEARNING METHOD FOR BRAIN TUMOR ...,"Skip main navigation
+
+#### Cookies Notification
+
+We use cookies on this site to enhance your user experience. By continuing to browse the site, you consent to the use of our cookies. Learn More
+
+×
+
+System Maintenance – October 10, 2025, 1 PM (PST)  
+  
+During this time, you may experience a brief 10-minute downtime of our website and related services. For any enquiries, contact us at (/cdn-cgi/l/email-protection#eb889e989f84868e99888a998eab9c989b88c5888486) for any enquiries. [...] ## Login to your account
+
+New User Institutional Login
+
+## Change Password
+
+## Password Changed Successfully
+
+Your password has been changed
+
+## Create a new account
+
+Returning user
+
+Can't sign in? Forgot your password?
+
+Enter your email address below and we will send you the reset instructions
+
+Cancel
+
+If the address matches an existing account you will receive an email with instructions to reset your password
+
+Close
+
+## Request Username
+
+Can't sign in? Forgot your username?
+
+Enter your email address below and we will send you your username
+
+If the address matches an existing account you will receive an email with instructions to retrieve your username
+
+ Search
+
+  + Anywhere
+
+  Advanced Search
+ 0 My Cart
+ Sign in
+ Institutional Access
+
+Skip main navigation
+
+#### Cookies Notification",0.49804688,
+https://www.sciencedirect.com/science/article/abs/pii/S1746809422010035,A novel approach for brain tumour detection using deep learning ...,"Deep Medic, a three-dimensional network that collects mid- and low-feature maps and combines those maps regionally and globally through a two-way design. On the other hand, training data for 2D segmentation is 155 times more abundant (every three-dimensional MRI dataset comprises 155 two-dimensional layered information), hence two-dimensional segmentation has subsequently attracted interest . In his paper  proposed a segmentation methodology in which a cascaded combination of CNN and FCN is used for brain tumour detection. A combination of Recurrent Neural Networks (RNNs) and long–short term memory (LSTM) are also used for image segmentation and were proposed by Järemo in 2021 . [...] segment brain tumour sub-regions. In order to improve the field of brain tumour segmentation, Rehman et al.  proposed a 2D image segmentation approach called BU-Net. In addition to the customized loss function, the baseline U-Net design makes use of residual extended skip (RES) and wide context (WC). For this study, researchers used the dice score to quantitatively compare the performance of the proposed BU-Net on the high-grade glioma (HGG) datasets from the BraTS (2017/2018) Challenge datasets. The authors suggested a modified U-Net method to detect brain tumours in this study. Our tests show that U-Net enhances system performance. Overall, our contributions are as follows: [...] ## Experimental results
+
+The model is implemented in Matlab 2021(a) with Cuda available service, and the version of cude is 5.0. Stochastic gradient descent with the Adam optimizer (learning rate = 1e-4) was used to minimize the loss function (cross-entropy). On an NVIDIA GTX Titan X GPU with CUDNN v5.0, each training takes about 6 h. The proposed U-Net architecture also enables networks to be trained on GPUs with as little as 3 GB of RAM. Even though the sizes of the volumes in the digested databases prevent dense
+
+## Discussion",0.9991441,
+https://esmed.org/deep-learning-for-mri-brain-tumor-classification/,Deep Learning for MRI Brain Tumor Classification,"### 4.5 Image Augmentation
+
+To address dataset imbalance and improve model robustness, extensive data augmentation was performed. Each MRI image underwent random transformations such as horizontal and vertical flips, rotations (±15°), zoom adjustments, and brightness shifts. These augmentations artificially expanded the dataset size, introduced geometric variability, and simulated different patient head orientations commonly encountered in clinical practice.
+
+Data Augmentation Results. Examples of augmented MRI brain tumor images.
+
+### 4.6 Noise Reduction and Shuffling [...] Systematic reviews emphasize semi-supervised and self-adapting frameworks. Umarani et al. 2024 and Hassan et al. 2025 reviewed state-of-the-art segmentation techniques, highlighting improvements in CNN architectures, loss functions, and multi-modal fusion. Jin et al. 2025 focused on semi-supervised strategies to leverage partially labeled datasets. Ghadimi et al. 2025 examined ensemble and attention-based networks for glioma segmentation, while Bouhafra and El Bahi 2025 integrated detection and classification for multi-class tumor categorization. Havaei et al. 2017 provided foundational DL approaches, Bhandari et al. 2020 highlighted CNN implementation challenges, and Litjens et al. 2017 positioned brain tumor segmentation within the broader AI in medical imaging context. [...] The accuracy and loss trajectories of both models demonstrate distinct learning behaviors. The ResNet18 achieved a peak testing accuracy of 99.69%, with a corresponding smooth and consistent loss decline, indicating strong generalization and effective parameter optimization. Conversely, the CNN model attained a final testing accuracy of 96.87%, accompanied by a slightly fluctuating loss curve suggesting slower feature learning and moderate overfitting tendencies in deeper layers.
+
+Training and validation performance curves for CNN and ResNet18 models",0.9976949,

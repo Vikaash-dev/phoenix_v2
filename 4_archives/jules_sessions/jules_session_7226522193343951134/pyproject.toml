@@ -1,0 +1,8 @@
+
+[project]
+name = "brain-tumor-detection"
+version = "0.1.0"
+requires-python = ">=3.11, <3.12"
+dependencies = [
+    "tensorflow==2.13.0",
+]

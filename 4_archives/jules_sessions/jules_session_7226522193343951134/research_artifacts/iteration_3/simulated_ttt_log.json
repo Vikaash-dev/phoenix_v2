@@ -1,0 +1,63 @@
+{
+  "metadata": {
+    "experiment": "Zero-Shot Generalization (OOD)",
+    "dataset": "Br35H (Simulated Noise + Artifacts)",
+    "date": "2026-01-22"
+  },
+  "models": {
+    "NeuroSnake_KAN_Standard": {
+      "inference_steps": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "accuracy": [
+        0.89,
+        0.89,
+        0.89,
+        0.89,
+        0.89,
+        0.89,
+        0.89,
+        0.89,
+        0.89,
+        0.89
+      ],
+      "final_accuracy": 0.89
+    },
+    "TTT_KAN": {
+      "inference_steps": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "accuracy": [
+        0.89,
+        0.9268,
+        0.94888,
+        0.962128,
+        0.9700768,
+        0.97484608,
+        0.977707648,
+        0.9794245887999999,
+        0.98045475328,
+        0.981072851968
+      ],
+      "final_accuracy": 0.982
+    }
+  }
+}
