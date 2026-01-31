@@ -1,0 +1,2 @@
+# No external dependencies required for Core Runtime
+# We use standard library (subprocess, os, sys)

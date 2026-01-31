@@ -1,0 +1,5 @@
+# Legacy Configuration File
+IMG_HEIGHT = 224
+IMG_WIDTH = 224
+BATCH_SIZE = 32
+LEARNING_RATE = 1e-4

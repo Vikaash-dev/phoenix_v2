@@ -1,0 +1,15 @@
+{
+  "id": "yourvikaash/phoenix-v3-1-sota-training",
+  "title": "PHOENIX v3.1 SOTA Training (Hybrid Liquid-SSM)",
+  "code_file": "phoenix_v3_1_training.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_internet": false,
+  "dataset_sources": [
+    "dschettler8845/brats-2023-adult-glioma-segmentation"
+  ],
+  "competition_sources": [],
+  "kernel_sources": []
+}
