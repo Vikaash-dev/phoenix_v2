@@ -1,0 +1,16 @@
+{
+  "id": "rvikaash/phoenix-mamba-v2-training",
+  "title": "Phoenix Mamba V2 Training",
+  "code_file": "train.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_internet": true,
+  "dataset_sources": [
+    "rvikaash/phoenix-mamba-v2-lib",
+    "masoudnickparvar/brain-tumor-mri-dataset"
+  ],
+  "competition_sources": [],
+  "kernel_sources": []
+}

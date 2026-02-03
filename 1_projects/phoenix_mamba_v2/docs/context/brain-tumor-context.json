@@ -1,0 +1,66 @@
+{
+  "project_name": "Phoenix Mamba V2 - Brain Tumor Detection",
+  "description": "Next-generation brain tumor detection framework using Selective State-Space Models (Mamba) and Dynamic Snake Convolutions.",
+  "root_directory": "1_projects/phoenix_mamba_v2",
+  "files": [
+    {
+      "path": "1_projects/phoenix_mamba_v2/src/models/phoenix.py",
+      "type": "Source Code",
+      "tags": ["model", "architecture", "mamba", "core"],
+      "description": "Main PhoenixMambaV2 model definition combining 2.5D aggregation, Mamba blocks, and Heterogeneity Attention."
+    },
+    {
+      "path": "1_projects/phoenix_mamba_v2/src/models/ssm.py",
+      "type": "Source Code",
+      "tags": ["model", "component", "s6", "mamba"],
+      "description": "Implementation of the S6 Layer (Selective State-Space Model) using TensorFlow."
+    },
+    {
+      "path": "1_projects/phoenix_mamba_v2/src/models/legacy/neurosnake_model.py",
+      "type": "Source Code (Legacy)",
+      "tags": ["model", "legacy", "cnn", "snake_conv"],
+      "description": "Legacy NeuroSnake architecture combining Dynamic Snake Convolutions and MobileViT."
+    },
+    {
+      "path": "1_projects/phoenix_mamba_v2/src/data/processors.py",
+      "type": "Source Code",
+      "tags": ["data", "preprocessing"],
+      "description": "Clinical and Fast preprocessing pipelines (Skull Strip, Bias Correction, CLAHE)."
+    },
+    {
+      "path": "1_projects/phoenix_mamba_v2/src/data/augmentation.py",
+      "type": "Source Code",
+      "tags": ["data", "augmentation"],
+      "description": "Physics-informed augmentation simulating MRI artifacts (Rician noise, Ghosting)."
+    },
+    {
+      "path": "1_projects/phoenix_mamba_v2/docs/research/research_paper_1769493927.md",
+      "type": "Documentation",
+      "tags": ["research", "paper"],
+      "description": "Draft research paper outlining the motivation and methodology of the Phoenix Mamba V2 architecture."
+    },
+    {
+      "path": "1_projects/phoenix_mamba_v2/docs/REFLECTION_AND_REFINEMENT.md",
+      "type": "Documentation",
+      "tags": ["documentation", "migration"],
+      "description": "Summary of the migration to PARA structure and architectural refinements."
+    },
+    {
+      "path": "1_projects/phoenix_mamba_v2/config/reproducibility/training_config.json",
+      "type": "Configuration",
+      "tags": ["config", "training"],
+      "description": "Hyperparameters and configuration for training runs."
+    },
+    {
+      "path": "1_projects/phoenix_mamba_v2/scripts/run_pipeline.py",
+      "type": "Script",
+      "tags": ["cli", "entrypoint"],
+      "description": "Unified CLI entry point for training, testing, and demo execution."
+    }
+  ],
+  "dataset_info": {
+    "location": "1_projects/phoenix_mamba_v2/data/",
+    "structure": "Training/Testing split with subfolders for classes (glioma, meningioma, pituitary, no_tumor)",
+    "preprocessing": "ClinicalPreprocessor (Skull Strip -> Bias Correct -> CLAHE -> Z-Score)"
+  }
+}
